@@ -1,0 +1,1039 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My English Companion — Parcours vivants</title><meta name="theme-color" content="#14233B"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="English Companion"><meta name="description" content="Apprendre l’anglais à travers des aventures du quotidien."><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon-192.png" sizes="192x192"><link rel="apple-touch-icon" href="./icon-192.png"><style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#26364d;background:#eef3fc}*{box-sizing:border-box}body{margin:0}.app{max-width:740px;min-height:100dvh;margin:auto;background:#fff;display:flex;flex-direction:column}header{padding:18px 20px;border-bottom:1px solid #e5eaf4;display:flex;justify-content:space-between;gap:10px;align-items:center}h1{font-size:1.12rem;margin:0}header small{color:#71819b}.settings{padding:14px 20px;background:#f8faff;display:flex;gap:12px;flex-wrap:wrap;align-items:end}label{font-size:.8rem;font-weight:650;color:#566681}select,textarea{font:inherit;border:1px solid #cbd8ec;border-radius:10px;padding:9px;background:white;color:#26364d}select{display:block;margin-top:5px}button{cursor:pointer;font:inherit}button:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}.main{padding:22px 20px;display:flex;flex-direction:column;gap:15px;flex:1}.progress{display:flex;justify-content:space-between;font-size:.82rem;color:#6a7891}.bar{height:7px;border-radius:10px;background:#e5ecfa;overflow:hidden}.bar>span{display:block;background:#2563eb;height:100%;transition:width .2s}.card{border:1px solid #d9e5fa;border-radius:19px;overflow:hidden;box-shadow:0 8px 30px #164dc40b}.card-head{background:#eaf2ff;color:#1d4fa9;padding:15px 20px;font-size:.8rem;font-weight:800;display:flex;justify-content:space-between}.content{padding:24px 20px}.english{font-size:clamp(1.95rem,6vw,2.8rem);font-weight:850;letter-spacing:-.025em;line-height:1.17;color:#164dc4;margin:0 0 17px}.instruction{font-size:1.05rem;font-weight:650;line-height:1.5;margin:19px 0 7px}.translation{font-size:.78rem;color:#8997ac;line-height:1.45;margin:0}.choice{width:100%;text-align:left;background:#fff;border:1.5px solid #cfddf5;border-radius:12px;padding:15px;color:#164dc4;font-size:1.09rem;font-weight:700;margin-top:12px}.choice.selected{background:#eaf2ff;border-color:#2563eb}.choice .fr{display:block;font-size:.75rem;font-weight:400;color:#94a0b1;margin-top:7px}.subtle{font-size:.8rem;color:#73829b}.hint{padding:13px 15px;border-left:3px solid #c6d8f8;background:#f6f9ff;font-size:.89rem;color:#516078;line-height:1.5;margin-top:17px}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.btn{border:1px solid #cbd8ed;background:#fff;color:#234c96;border-radius:11px;padding:11px 14px;font-weight:700}.btn.primary{background:#1d4ed8;border-color:#1d4ed8;color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}.nav{display:flex;gap:10px;margin-top:auto}.nav button{flex:1}.prompt{margin:16px 0;padding:14px;border-radius:12px;background:#fff8e9;border:1px solid #f3e2b6}.prompt strong{display:block;color:#825a13;font-size:1rem}.prompt p{font-size:.85rem;color:#705e3b;margin:7px 0 0}.answer-box{margin-top:14px}textarea{width:100%;min-height:100px;resize:vertical;margin-top:9px}.hidden{display:none!important}.notice{color:#2c7659;font-size:.85rem;margin-top:8px}.footer{padding:0 20px 20px;font-size:.75rem;color:#8997aa}.summary{line-height:1.6}.summary li{margin-bottom:8px}.download{display:inline-block;background:#1d4ed8;color:white;padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:10px}.recap{background:#f7f9fe;padding:14px;border-radius:12px;margin:14px 0}.mode-picker{display:flex;gap:10px;margin:15px 0}.mode-picker .btn{flex:1}.mode-picker .active{background:#eaf2ff;border-color:#2563eb;color:#164dc4}.switch{display:flex;align-items:center;gap:6px}.switch input{accent-color:#2563eb}@media(max-width:480px){header,.settings{padding:14px}.main{padding:17px 14px}.content{padding:20px 16px}}
+.setup-overlay{position:fixed;inset:0;background:rgba(18,34,60,.55);z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}.setup-panel{background:white;border-radius:20px;max-width:560px;width:100%;max-height:92dvh;overflow:auto;box-shadow:0 24px 70px #172b5060}.setup-panel h2{margin:0;padding:22px 22px 5px;color:#164dc4;font-size:1.5rem}.setup-panel>p{margin:0;padding:0 22px 12px;color:#64748b}.setup-panel .settings{padding:18px 22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.setup-panel .settings label{min-width:0}.setup-panel .settings select{width:100%}.setup-actions{padding:4px 22px 22px;display:flex;justify-content:flex-end;gap:10px}.setup-actions .btn{min-width:150px}@media(max-width:480px){.setup-panel .settings{grid-template-columns:1fr}}
+</style><style>.home{max-width:760px;margin:26px auto;padding:16px}.home-hero{padding:25px 10px}.home-hero h2{font-size:clamp(27px,5vw,38px);color:#1749ac;margin:8px 0}.home-hero p{color:#66768d}.eyebrow{font-size:11px;letter-spacing:2px;color:#637b9f;font-weight:800}.home-options{display:grid;gap:13px}.home-choice{width:100%;text-align:left;border:1px solid #d5e0f1;background:#fff;border-radius:17px;padding:19px 22px;color:#194ca6;font-size:19px;cursor:pointer;box-shadow:0 4px 18px #1b4b8b0d}.home-choice strong{display:inline-block;margin-left:8px}.home-choice small{display:block;color:#68788c;font-size:13px;margin:7px 0 0 31px}.home-choice:hover{border-color:#5684d5}.home-choice:disabled{opacity:.48;cursor:not-allowed}.home-status{color:#63758e;font-size:13px;margin:18px 8px}.hidden{display:none!important}</style><style>
+/* Lisibilité mobile : texte et zones tactiles plus généreux. */
+@media (max-width: 600px) {
+  html { font-size: 19px; }
+  .app { width: 100%; }
+  header { padding: 17px 18px; }
+  h1 { font-size: 1.18rem; }
+  header small { font-size: .79rem; line-height: 1.5; display:block; margin-top:5px; }
+  .home { margin: 12px auto; padding: 16px; width:100%; }
+  .home-hero { padding: 19px 5px; }
+  .home-hero h2 { font-size: 2rem; line-height: 1.14; }
+  .home-hero p { font-size: 1rem; line-height:1.5; }
+  .eyebrow { font-size: .7rem; }
+  .home-choice { font-size: 1.12rem; padding: 21px 16px; min-height: 88px; }
+  .home-choice small { font-size: .86rem; line-height:1.45; }
+  .home-status { font-size: .9rem; line-height:1.5; }
+  .main { padding: 19px 14px; gap: 17px; }
+  .progress, .card-head { font-size: .86rem; }
+  .content { padding: 23px 17px; }
+  .english { font-size: clamp(2.05rem, 8.5vw, 2.65rem); line-height:1.2; }
+  .instruction { font-size: 1.12rem; line-height:1.5; }
+  .translation { font-size: .85rem; line-height:1.5; }
+  .choice { font-size: 1.14rem; line-height:1.4; padding: 17px; min-height: 58px; }
+  .choice .fr { font-size: .85rem; line-height:1.45; }
+  .hint { font-size: .99rem; line-height:1.55; }
+  .subtle, .prompt p, .notice { font-size: .92rem; line-height:1.5; }
+  .prompt strong { font-size: 1.07rem; }
+  .btn { font-size: 1rem; padding: 15px 14px; min-height: 50px; }
+  .nav { gap: 9px; }
+  .nav .btn { min-width: 0; }
+  label { font-size: .96rem; }
+  select, textarea { font-size: 1rem; }
+  .setup-panel h2 { font-size: 1.5rem; }
+  .setup-panel > p { font-size: .96rem; line-height:1.5; }
+  .summary { font-size: 1rem; }
+}
+</style><style id="install-styles">
+header{flex-wrap:wrap}.install-button{border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;border-radius:12px;padding:12px 16px;font-weight:750;min-height:48px;white-space:normal}.install-button:hover{background:#1744b8}.install-button:focus-visible,.install-close:focus-visible{outline:3px solid #93c5fd;outline-offset:3px}.install-panel{position:fixed;z-index:80;inset:0;background:#152947a8;display:grid;place-items:center;padding:16px}.install-panel[hidden],.install-button[hidden]{display:none!important}.install-dialog{background:#fff;border-radius:18px;padding:24px;width:min(100%,440px);box-shadow:0 15px 60px #102c4d55;color:#26364d}.install-dialog h2{color:#164dc4;margin:0 0 12px;font-size:1.35rem}.install-dialog p{line-height:1.55}.install-close{background:#1d4ed8;border:0;border-radius:10px;color:#fff;padding:12px 18px;font-weight:700;min-height:46px}.install-status{font-size:.85rem;color:#526681;margin:8px 0 0}@media(max-width:600px){header{align-items:flex-start}.install-button{width:100%;font-size:1rem}}
+</style><style id="monzo-inspired-colors">
+/* Monzo-inspired visual language: independent educational brand */
+:root{--coral:#FF655A;--coral-deep:#B72D31;--navy:#14233B;--cream:#FFF8EF;--lavender:#EAE1FF;--mint:#D8F5E7;--green:#116344;--ink:#14233B;--sub:#435069;color-scheme:light}
+html,body{background:#F2EDE7!important;color:var(--navy)!important}
+.app{max-width:850px!important;background:var(--cream)!important;box-shadow:0 22px 70px #14233B18!important}
+header{background:var(--navy)!important;border-bottom:0!important;color:#fff!important;padding:22px 26px!important;box-shadow:none!important;gap:15px}
+header h1{color:#fff!important;font-weight:900!important;letter-spacing:-.045em!important;font-size:1.36rem!important}
+header small{color:#E5ECF6!important;font-weight:500!important}
+.install-button{background:var(--coral)!important;color:var(--navy)!important;border:2px solid var(--coral)!important;border-radius:999px!important;font-weight:850!important;padding:12px 19px!important;box-shadow:none!important}
+.install-button:hover{background:#FF897C!important}
+.home{max-width:850px!important;margin:0 auto 35px!important;padding:0 24px 22px!important;width:100%!important}
+.home-hero{background:var(--coral)!important;color:var(--navy)!important;border:0!important;border-radius:0 0 30px 30px!important;padding:40px 30px 39px!important;margin:0 -24px 25px!important;position:relative!important;overflow:hidden!important}
+.home-hero:after{content:'✳'!important;display:block!important;position:absolute!important;right:-10px!important;top:20px!important;font-size:150px!important;line-height:1!important;color:#FFD7CD66!important;pointer-events:none!important}
+.home-hero .eyebrow{background:var(--navy)!important;color:#fff!important;border-radius:999px!important;padding:9px 14px!important;display:inline-block!important;letter-spacing:1.25px!important;font-weight:800!important}
+.home-hero h2{color:var(--navy)!important;font-size:clamp(2.6rem,7vw,4.35rem)!important;font-weight:950!important;letter-spacing:-.065em!important;line-height:1.02!important;max-width:660px!important;margin:20px 0 18px!important;position:relative;z-index:1}
+.home-hero p{color:#26314A!important;font-size:1.09rem!important;line-height:1.5!important;max-width:550px!important;font-weight:650!important;position:relative;z-index:1}
+.home-options{gap:14px!important;margin-top:20px!important}
+.home-choice{background:#fff!important;color:var(--navy)!important;border:2px solid var(--navy)!important;border-radius:21px!important;padding:24px!important;box-shadow:5px 5px 0 var(--navy)!important;transition:transform .15s,box-shadow .15s!important}
+.home-choice:hover{transform:translate(-2px,-2px)!important;box-shadow:7px 7px 0 var(--navy)!important}
+.home-choice strong{color:var(--navy)!important;font-weight:900!important}
+.home-choice small{color:#435069!important}
+#continue{background:#EAE1FF!important;border-left:10px solid #8160E6!important}
+#discover{background:#FFF0D5!important;border-left:10px solid #D48D17!important}
+#review{background:#D8F5E7!important;border-left:10px solid #116344!important}
+.home-status{color:#435069!important}
+.main{background:var(--cream)!important}
+.progress{color:var(--navy)!important;font-weight:800!important}
+.bar{background:#DDD4E9!important;height:12px!important}
+.bar>span{background:var(--green)!important}
+.card{background:#fff!important;border:2px solid var(--navy)!important;border-radius:22px!important;box-shadow:5px 6px 0 #14233B15!important}
+.card-head{background:var(--lavender)!important;color:var(--navy)!important;border-bottom:2px solid var(--navy)!important;font-weight:850!important}
+.english{color:#173F9B!important;font-weight:900!important;letter-spacing:-.045em!important}
+.instruction{color:var(--navy)!important}
+.translation,.choice .fr{color:#4B5870!important}
+.hint{background:#FFF0D5!important;border-left:6px solid #D48D17!important;border-radius:0 13px 13px 0!important;color:#593E16!important}
+.choice{background:#fff!important;color:#173F9B!important;border:2px solid #B5BED0!important;border-radius:13px!important;box-shadow:none!important}
+.choice.selected{background:var(--lavender)!important;border-color:#173F9B!important;box-shadow:inset 0 0 0 1px #173F9B!important}
+.btn{border-radius:999px!important;border:2px solid var(--navy)!important;color:var(--navy)!important;font-weight:850!important;background:#fff!important}
+.btn.primary,.download{background:var(--coral)!important;border:2px solid var(--navy)!important;color:var(--navy)!important;border-radius:999px!important;font-weight:900!important}
+.btn.primary:hover,.download:hover{background:#FF897C!important}
+.btn:focus-visible,.home-choice:focus-visible,.install-button:focus-visible,select:focus-visible,textarea:focus-visible{outline:4px solid #8160E6!important;outline-offset:3px!important}
+.notice{color:var(--green)!important}
+.prompt{background:#FFF0D5!important;border:2px solid #D48D17!important}
+.recap{background:var(--mint)!important;border:2px solid var(--green)!important}
+.mode-picker .active{background:var(--lavender)!important;color:var(--navy)!important;border-color:#8160E6!important}
+.switch input{accent-color:var(--green)!important}
+.setup-overlay{background:#14233BAA!important}
+.setup-panel,.install-dialog{background:var(--cream)!important;color:var(--navy)!important;border:2px solid var(--navy)!important;border-radius:24px!important;box-shadow:8px 8px 0 #14233B55!important}
+.setup-panel h2,.install-dialog h2{color:var(--navy)!important}
+.setup-panel .settings{background:var(--lavender)!important}
+.install-close{background:var(--coral)!important;color:var(--navy)!important;border:2px solid var(--navy)!important;border-radius:999px!important}
+@media(max-width:600px){header{padding:18px 16px!important}.home{padding:0 17px 20px!important}.home-hero{margin:0 -17px 22px!important;padding:34px 20px!important;border-radius:0 0 23px 23px!important}.home-hero h2{font-size:2.55rem!important}.home-choice{padding:21px 17px!important}.install-button{min-height:52px!important;width:100%!important}}
+@media(prefers-reduced-motion:reduce){.home-choice{transition:none!important}}
+</style></head><body><div class="app"><header><div><h1>My English Companion</h1><small>Des aventures en anglais, à ton rythme.</small></div><button type="button" id="install-app" class="install-button" aria-haspopup="dialog">⬇ Installer l’application</button></header><section class="home" id="home"><div class="home-hero"><span class="eyebrow">UNE PETITE VICTOIRE À LA FOIS</span><h2>Your next little victory starts here.</h2><p>Des aventures du quotidien, de vraies phrases en anglais et le plaisir de progresser.</p></div><div class="home-options"><button class="home-choice" id="continue">↗ <strong>Continuer mon aventure</strong><small>Reprendre là où tu t'es arrêté.</small></button><button class="home-choice" id="discover">✦ <strong>Découvrir une aventure</strong><small>Choisir une nouvelle mission du quotidien.</small></button><button class="home-choice" id="review">↺ <strong>Revoir ce que j'ai appris</strong><small>Une mini-mission accessible dès le début, puis adaptée à tes acquis.</small></button></div><p class="home-status" id="home-status"></p></section><div class="setup-overlay" id="setup-overlay"><div class="setup-panel" role="dialog" aria-modal="true" aria-labelledby="setup-title"><h2 id="setup-title">Nouveau parcours</h2><p>Choisis ton aventure et ton rythme avant de commencer.</p><section class="settings"><label>Lieu<select id="path"><option value="room">Mon petit monde · retrouver les clés</option><option value="kitchen">Un invité surprise · offrir à boire</option><option value="departure">Je suis en retard ! · partir à temps</option><option value="meeting">On se retrouve où ? · heure, lieu et météo</option><option value="neighbour_noise">La musique du voisin m’empêche de dormir ! · dialogue et compromis</option><option value="laundrette">La machine s’arrête à la laverie ! · lessive et dépannage</option><option value="workshop">Ma première activité en groupe ! · poterie et rencontres</option><option value="parcel">Mon colis a disparu ! · livraison et aide</option><option value="cafe">Oups, ce n’est pas ma commande ! · café et paiement</option></select></label><label>Durée<select id="length"><option value="short">Petit · 3 scènes</option><option value="medium" selected>Moyen · 6 scènes</option><option value="long">Long · tout le parcours</option></select></label><label class="switch"><input id="adventure" type="checkbox"> Mode aventure</label><label>Humour<select id="humor"><option value="playful">Taquin</option><option value="gentle">Doux</option><option value="spicy">Très taquin</option></select></label><label>Vitesse<select id="speed"><option value="0.8">Lente</option><option value="1" selected>Normale</option><option value="1.15">Rapide</option></select></label><label class="switch"><input id="auto" type="checkbox" checked> Voix anglaise auto</label></section><div class="setup-actions"><button class="btn hidden" id="cancel-setup">Annuler</button><button class="btn primary" id="start-setup">Commencer →</button></div></div></div><main class="main hidden" id="learning"><div class="progress"><span id="scene-name"></span><strong id="counter"></strong></div><div class="bar"><span id="progress"></span></div><article class="card"><div class="card-head"><span id="phase">🇬🇧 ENGLISH FIRST</span><span id="topic"></span></div><div class="content" id="content"></div></article><div class="nav"><button class="btn" id="prev">← Précédent</button><button class="btn primary" id="next">Suivant →</button></div></main></div><script>
+// MODIFIE ICI LES SCÈNES : chaque question doit garder un lien naturel avec la précédente.
+const scenes={
+ neighbour_noise:[
+  {
+    "topic": "Une soirée trop bruyante",
+    "en": "It is nearly ten at night. Loud music is coming from the flat next door. How do you describe the situation?",
+    "fr": "Il est presque 22 heures. Tu entends de la musique depuis l’appartement voisin.",
+    "instruction": "Décris simplement ce que tu entends, sans juger la personne.",
+    "choices": [
+      "The music next door is quite loud.",
+      "I can hear loud music from next door.",
+      "There is a lot of noise coming from next door."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Oser frapper à la porte",
+    "en": "You decide to speak to your neighbour. They open the door. How do you begin politely?",
+    "fr": "Tu décides de parler directement à ton voisin. Il ouvre la porte.",
+    "instruction": "Commence avec une formule respectueuse avant de parler du bruit.",
+    "choices": [
+      "Hi, sorry to bother you. Can I ask you something?",
+      "Hello, have you got a moment?",
+      "Sorry to interrupt. Could we have a quick word?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Une demande claire",
+    "en": "Your neighbour says, “Of course. What is it?” How do you ask them to lower the volume?",
+    "fr": "Ton voisin t’écoute et te demande ce qui ne va pas.",
+    "instruction": "Fais une demande concrète et polie, plutôt qu’un reproche.",
+    "choices": [
+      "Could you turn the music down a little, please?",
+      "Would you mind lowering the volume, please?",
+      "Could you keep the music a bit quieter?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Expliquer pourquoi",
+    "en": "Your neighbour asks, “Is it keeping you awake?” How do you explain the impact on you?",
+    "fr": "Ton voisin cherche à comprendre pourquoi le bruit te gêne.",
+    "instruction": "Parle de ta propre situation avec « I », sans accuser.",
+    "choices": [
+      "Yes, I can't get to sleep with the music this loud.",
+      "Yes, I need to get up early tomorrow.",
+      "I'm trying to sleep, but the music is keeping me awake."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Un horaire incertain",
+    "en": "Your neighbour says, “Sorry, we are celebrating a birthday. We will finish soon.” What do you ask to understand the timing?",
+    "fr": "Le voisin explique qu’il fête un anniversaire et promet de terminer bientôt.",
+    "instruction": "Demande une estimation du moment où la fête se terminera.",
+    "choices": [
+      "Do you know roughly what time you will finish?",
+      "About what time do you think the music will stop?",
+      "Could you tell me when you expect to finish?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Un compromis",
+    "en": "Your neighbour says, “Around eleven, but I can turn it down now.” How do you accept the offer?",
+    "fr": "Le voisin propose de baisser le son tout de suite et de terminer vers 23 heures.",
+    "instruction": "Accepte le compromis et montre que tu apprécies le geste.",
+    "choices": [
+      "That would really help, thank you.",
+      "That sounds fair. Thanks for turning it down.",
+      "I appreciate that. Thank you very much."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Vérifier le changement",
+    "en": "The music is quieter. Your neighbour asks, “Is this volume better?” How do you respond?",
+    "fr": "Le volume a baissé et le voisin vérifie que cela te convient.",
+    "instruction": "Confirme le résultat de façon simple et positive.",
+    "choices": [
+      "Yes, that's much better. Thanks!",
+      "Yes, I can hardly hear it now.",
+      "That's fine now, thank you."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Prévenir la prochaine fois",
+    "en": "Your neighbour says, “We sometimes have friends over on Fridays.” What could you ask for next time?",
+    "fr": "Ton voisin organise parfois des soirées le vendredi.",
+    "instruction": "Propose une façon simple d’éviter le même malentendu.",
+    "choices": [
+      "Could you let me know in advance next time?",
+      "Would you mind giving me a heads-up next time?",
+      "Could you tell me beforehand if you are having a party?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Une bonne entente",
+    "en": "Your neighbour agrees to warn you next time. The music stays low. How do you end the conversation?",
+    "fr": "Le voisin accepte de te prévenir et garde la musique à un volume raisonnable.",
+    "instruction": "Termine avec une phrase qui préserve de bonnes relations.",
+    "choices": [
+      "Thanks for understanding. Have a good evening!",
+      "I really appreciate your help. Good night!",
+      "Thanks for being considerate. Enjoy the rest of your evening!"
+    ],
+    "joke": ""
+  }
+],
+ laundrette:[
+  {
+    "topic": "Une machine disponible ?",
+    "en": "You arrive at a laundrette with a bag of clothes. A machine has a green light. What do you ask?",
+    "fr": "Tu arrives à la laverie. Une machine affiche un voyant vert.",
+    "instruction": "Avant de commencer, vérifie poliment si tu peux utiliser cette machine.",
+    "choices": [
+      "Is this washing machine free?",
+      "Can I use this machine?",
+      "Is anyone using this washer?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Choisir le programme",
+    "en": "The machine offers Quick, Cotton and Delicates. Your clothes need gentle washing. What do you ask?",
+    "fr": "L’écran propose trois programmes. Tes vêtements demandent un lavage doux.",
+    "instruction": "Demande un conseil sur le programme adapté à tes vêtements.",
+    "choices": [
+      "Which setting is best for delicate clothes?",
+      "Should I use the delicates cycle?",
+      "Can you help me choose a gentle cycle?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Lancer le lavage",
+    "en": "The attendant recommends the delicates cycle. You are ready to start. What do you say?",
+    "fr": "La personne qui travaille ici te recommande le programme délicat.",
+    "instruction": "Annonce ton choix avant de lancer la machine.",
+    "choices": [
+      "I'll use the delicates cycle.",
+      "I'll choose the gentle setting.",
+      "I'll start with the delicate wash."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "La machine s’arrête",
+    "en": "One minute later, the washer stops and shows “Door open”. What do you tell the attendant?",
+    "fr": "Une minute après le démarrage, la machine s’arrête et affiche un message.",
+    "instruction": "Décris ce qui vient de se passer et ce que l’écran indique.",
+    "choices": [
+      "The machine has stopped.",
+      "It says the door is open.",
+      "The screen shows a door error."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Le problème continue",
+    "en": "You close the door, but the same error appears. How do you explain what you tried?",
+    "fr": "Tu refermes la porte, mais le message ne disparaît pas.",
+    "instruction": "Explique une action déjà tentée et son résultat.",
+    "choices": [
+      "I closed the door, but the error is still there.",
+      "I tried closing it again, but it didn't help.",
+      "The message is still showing after I closed it."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Demander de l’aide",
+    "en": "You decide not to force the door. How do you ask the attendant for help?",
+    "fr": "Tu préfères ne pas forcer la porte de la machine.",
+    "instruction": "Demande une intervention de façon simple et courtoise.",
+    "choices": [
+      "Could you take a look at this machine?",
+      "Could you help me with this problem?",
+      "Would you mind checking the machine?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Un autre appareil",
+    "en": "The attendant says the washer is out of order and offers another machine at no extra charge. What do you decide?",
+    "fr": "La machine est en panne. On te propose d’en utiliser une autre gratuitement.",
+    "instruction": "Accepte la solution et explique ce que tu vas faire.",
+    "choices": [
+      "I'll use the other machine, thanks.",
+      "I'd like to try the working machine.",
+      "That sounds good. I'll move my clothes."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Quand revenir ?",
+    "en": "The second washer starts normally. You want to know when to come back. What do you ask?",
+    "fr": "La deuxième machine démarre normalement.",
+    "instruction": "Demande combien de temps il faut attendre.",
+    "choices": [
+      "How long will the wash take?",
+      "What time should I come back?",
+      "When will this cycle finish?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Mission accomplie",
+    "en": "You return thirty minutes later. Your clothes are clean. How do you end the conversation?",
+    "fr": "Tu reviens trente minutes plus tard. Ton linge est propre.",
+    "instruction": "Confirme que tout est réglé et remercie la personne.",
+    "choices": [
+      "Everything worked this time. Thank you!",
+      "My clothes are ready. Thanks for your help.",
+      "That sorted it out. I really appreciate it."
+    ],
+    "joke": ""
+  }
+],
+ workshop:[
+  {
+    "topic": "Bienvenue à l’atelier",
+    "en": "You arrive at a pottery workshop. How do you greet the group?",
+    "fr": "Tu arrives dans un atelier où tu ne connais personne.",
+    "instruction": "Salue simplement le groupe.",
+    "choices": [
+      "Hi, everyone! I’m new here.",
+      "Hello! It’s my first time at this workshop."
+    ],
+    "joke": "Même les pots ont commencé quelque part."
+  },
+  {
+    "topic": "Faire connaissance",
+    "en": "Someone sits next to you. How do you start a conversation?",
+    "fr": "Une personne s’installe à côté de toi.",
+    "instruction": "Pose une question ouverte et sympathique.",
+    "choices": [
+      "Is this your first time here?",
+      "Have you done pottery before?"
+    ],
+    "joke": "Tu as déjà trouvé un premier point commun."
+  },
+  {
+    "topic": "Pourquoi essayer ?",
+    "en": "Your neighbour asks why you joined. What do you say?",
+    "fr": "Ton voisin te demande pourquoi tu as choisi cet atelier.",
+    "instruction": "Exprime une motivation personnelle.",
+    "choices": [
+      "I wanted to try something new.",
+      "I thought it would be fun to learn a new skill."
+    ],
+    "joke": "La curiosité est un excellent début."
+  },
+  {
+    "topic": "La démonstration",
+    "en": "The instructor says: “Keep your hands wet and turn the clay slowly.” What do you ask?",
+    "fr": "L’animatrice montre comment travailler l’argile.",
+    "instruction": "Demande une démonstration pour être sûr de comprendre.",
+    "choices": [
+      "Could you show me how to do it?",
+      "Can you demonstrate that again, please?"
+    ],
+    "joke": "L’argile ne t’en voudra pas de demander."
+  },
+  {
+    "topic": "Pas trop vite !",
+    "en": "The instructor explains the next step too quickly. What do you say?",
+    "fr": "La consigne suivante va trop vite pour toi.",
+    "instruction": "Demande poliment de ralentir.",
+    "choices": [
+      "Could you say that a little more slowly?",
+      "Sorry, could you repeat the last step?"
+    ],
+    "joke": "Même un vase a besoin de temps."
+  },
+  {
+    "topic": "Ton premier vase",
+    "en": "Your pot looks a little unusual. How do you describe your work?",
+    "fr": "Ton vase est un peu bancal, mais tu progresses.",
+    "instruction": "Donne ton avis avec humour et bienveillance.",
+    "choices": [
+      "It’s not perfect, but I like it.",
+      "It looks a bit strange, but I’m proud of it."
+    ],
+    "joke": "Une pomme de terre artistique, peut-être ?"
+  },
+  {
+    "topic": "Un compliment",
+    "en": "Someone says: “That looks really good!” How do you respond?",
+    "fr": "Une personne te fait un compliment inattendu.",
+    "instruction": "Accepte le compliment sans te dévaloriser.",
+    "choices": [
+      "Thank you! I’m quite pleased with it.",
+      "That’s kind of you to say. Thanks!"
+    ],
+    "joke": "Ton vase a déjà des admirateurs."
+  },
+  {
+    "topic": "Encourager ton voisin",
+    "en": "Your neighbour says: “Mine looks terrible.” What do you say?",
+    "fr": "Ton voisin doute de son travail.",
+    "instruction": "Encourage-le avec sincérité.",
+    "choices": [
+      "I really like what you’ve made.",
+      "You’re doing well. Keep going!"
+    ],
+    "joke": "La gentillesse est aussi une compétence."
+  },
+  {
+    "topic": "À la prochaine !",
+    "en": "The workshop ends. How do you say goodbye and suggest coming back?",
+    "fr": "L’atelier se termine et tu aimerais revenir.",
+    "instruction": "Exprime ton plaisir et propose de revenir.",
+    "choices": [
+      "I really enjoyed this. See you next time!",
+      "Would you like to come back next week?"
+    ],
+    "joke": "Le vase est bancal, la conversation est réussie."
+  }
+],
+ parcel:[
+  {
+    "topic": "Mission · colis introuvable",
+    "en": "Your tracking says “Delivered”, but there is no parcel. What do you say?",
+    "fr": "Le suivi indique « livré », mais tu ne vois aucun colis.",
+    "instruction": "Explique simplement le problème sans accuser le livreur.",
+    "choices": [
+      "My parcel hasn't arrived.",
+      "It says delivered, but I can't find it."
+    ],
+    "joke": "Ton colis sait se faire désirer."
+  },
+  {
+    "topic": "Vérifier la porte",
+    "en": "You look by the front door. Where else could it be?",
+    "fr": "Tu as vérifié devant ta porte, sans succès.",
+    "instruction": "Propose un autre endroit proche où regarder.",
+    "choices": [
+      "I'll check behind the bin.",
+      "I'll look near the side gate."
+    ],
+    "joke": "Même la poubelle devient suspecte."
+  },
+  {
+    "topic": "La photo de livraison",
+    "en": "The delivery photo shows a blue door. Your door is red. What do you notice?",
+    "fr": "La photo montre une porte bleue, alors que la tienne est rouge.",
+    "instruction": "Explique ce détail important en anglais.",
+    "choices": [
+      "That's not my front door.",
+      "The photo shows a different house."
+    ],
+    "joke": "Le colis a peut-être choisi une autre couleur."
+  },
+  {
+    "topic": "Parler au voisin",
+    "en": "Your neighbour opens the door. How do you ask about the parcel?",
+    "fr": "Tu frappes chez ton voisin pour vérifier.",
+    "instruction": "Pose une question polie, sans supposer qu'il a le colis.",
+    "choices": [
+      "Did a parcel arrive for me?",
+      "Have you seen a parcel with my name on it?"
+    ],
+    "joke": "Le voisin n'a pas de chat, mais il a des histoires."
+  },
+  {
+    "topic": "Une mauvaise adresse",
+    "en": "Your neighbour hasn't seen it. The photo may show another street. What do you say?",
+    "fr": "Ton voisin n'a rien reçu. La photo pourrait montrer une autre rue.",
+    "instruction": "Exprime ton hypothèse clairement.",
+    "choices": [
+      "I think it was delivered to the wrong address.",
+      "It may be at another house."
+    ],
+    "joke": "Le colis a pris un itinéraire créatif."
+  },
+  {
+    "topic": "Contacter le service client",
+    "en": "You contact customer support. How do you explain the situation?",
+    "fr": "Tu contactes le service client avec les informations du suivi.",
+    "instruction": "Résume le problème en une phrase utile.",
+    "choices": [
+      "My parcel says delivered, but I haven't received it.",
+      "Could you help me find my missing parcel?"
+    ],
+    "joke": "Place à l'enquête officielle."
+  },
+  {
+    "topic": "Donner une référence",
+    "en": "Support asks: “Do you have your order number?” What do you reply?",
+    "fr": "Le service client demande ton numéro de commande.",
+    "instruction": "Indique que tu peux le fournir.",
+    "choices": [
+      "Yes, I have my order number here.",
+      "Of course. I can give you the reference."
+    ],
+    "joke": "Heureusement, le numéro n'a pas disparu aussi."
+  },
+  {
+    "topic": "Demander une solution",
+    "en": "Support confirms the parcel went to the wrong address. What do you request?",
+    "fr": "Le service client confirme une erreur de livraison.",
+    "instruction": "Demande une solution concrète avec politesse.",
+    "choices": [
+      "Could you arrange another delivery, please?",
+      "Could you tell me when it will be delivered?"
+    ],
+    "joke": "Cette fois, on vise la bonne porte."
+  },
+  {
+    "topic": "Mission accomplie",
+    "en": "A new delivery is arranged. What do you say to finish the conversation?",
+    "fr": "Une nouvelle livraison est prévue à la bonne adresse.",
+    "instruction": "Remercie et confirme que la solution te convient.",
+    "choices": [
+      "Thank you for sorting this out.",
+      "That works for me. Thanks for your help!"
+    ],
+    "joke": "Ton colis connaît enfin le chemin de la maison."
+  }
+],
+ cafe:[
+  {topic:'Mission · petit-déjeuner',en:'You walk into a café. What would you like to order?',fr:'Tu entres dans un café pour prendre ton petit-déjeuner.',instruction:'Commande une boisson et quelque chose à manger, poliment.',choices:["Could I have a tea and a croissant, please?","I'd like a tea and a croissant, please."],joke:'Le serveur a déjà repéré le croissant.'},
+  {topic:'Demander le prix',en:'The barista smiles. “Anything else?” You want to know the price.',fr:'Le serveur te demande si tu veux autre chose.',instruction:'Avant de décider, demande combien coûte ta commande.',choices:['How much is it altogether?','How much does that cost?'],joke:'Le prix du croissant n’est pas un secret d’État.'},
+  {topic:'Choisir une alternative',en:'“Sorry, we have no croissants left.” What do you say?',fr:'Il n’y a plus de croissants.',instruction:'Reste poli et choisis une autre pâtisserie.',choices:["That's okay. Could I have a muffin instead?","No problem. Do you have any toast?"],joke:'Le dernier croissant a pris la fuite.'},
+  {topic:'Vérifier la commande',en:'The barista repeats: “One coffee and one muffin?”',fr:'Le serveur répète ta commande, mais tu avais demandé du thé.',instruction:'Corrige la boisson avant qu’il ne la prépare.',choices:['Actually, I ordered tea, not coffee.','Sorry, I asked for tea, please.'],joke:'Le café essaie de se faire passer pour du thé.'},
+  {topic:'Recevoir sa boisson',en:'You receive a coffee instead of tea. What do you say?',fr:'Malgré ta précision, on t’apporte un café.',instruction:'Signale l’erreur calmement et demande un échange.',choices:["Excuse me, this isn't what I ordered.","Could you change it for tea, please?"],joke:'Le café est tenace. Très tenace.'},
+  {topic:'Payer',en:'“Here is your tea and muffin.” How would you like to pay?',fr:'Tu as enfin la bonne commande.',instruction:'Demande à payer par carte.',choices:['Can I pay by card, please?','Do you take contactless payments?'],joke:'Le terminal de paiement entre en scène.'},
+  {topic:'Vérifier l’addition',en:'Your bill includes two muffins, but you only had one.',fr:'L’addition compte deux muffins alors que tu n’en as pris qu’un.',instruction:'Signale l’erreur sans accuser le serveur.',choices:["I think there's a mistake on the bill.","I only ordered one muffin, not two."],joke:'Le deuxième muffin est invisible. Pratique, mais cher.'},
+  {topic:'Demander une correction',en:'The barista says: “Oh, sorry about that!” What do you reply?',fr:'Le serveur reconnaît son erreur.',instruction:'Demande une addition corrigée, avec courtoisie.',choices:['Could you correct the bill, please?',"No worries. Could I have the updated total?"],joke:'L’addition vient de perdre son muffin imaginaire.'},
+  {topic:'Mission accomplie',en:'Your order and bill are correct. What do you say before leaving?',fr:'Tu as ta commande et tu as payé le bon prix.',instruction:'Termine l’échange avec une phrase naturelle et chaleureuse.',choices:['Thank you for your help. Have a nice day!','Thanks! Everything is sorted now.'],joke:'Une commande, trois imprévus, zéro panique.'}
+ ],
+ meeting:[
+ {topic:'Mission · retrouver un ami',en:'Your friend calls. “Where are you?” What do you say?',fr:'Ton ami t’appelle pour savoir où tu es.',instruction:'Tu attends en ville. Donne un repère simple pour qu’il puisse te trouver.',choices:["I'm near the train station.","I'm outside the library."],joke:'Une ville entière, mais un seul ami à retrouver.'},
+ {topic:'Demander l’heure',en:'You need to know the time. What do you ask?',fr:'Tu as besoin de connaître l’heure.',instruction:'Pose une question courte et naturelle pour connaître l’heure.',choices:['What time is it?','Do you have the time?'],joke:'Ta montre a choisi le silence.'},
+ {topic:'Dire l’heure',en:'The clock says 8:30. What do you say?',fr:'L’horloge indique 8 h 30.',instruction:'Exprime l’heure en anglais. Tu peux utiliser une formulation simple ou avec « past ».',choices:["It's eight thirty.","It's half past eight."],joke:'Huit heures trente : l’horloge et toi êtes d’accord.'},
+ {topic:'Préciser le lieu',en:'Your friend asks: “Are you inside or outside?”',fr:'Ton ami veut savoir si tu es à l’intérieur ou dehors.',instruction:'Précise où tu attends afin d’éviter de vous manquer.',choices:["I'm outside the station.","I'm inside the café."],joke:'Être au même endroit, c’est encore mieux du même côté de la porte.'},
+ {topic:'Parler du temps',en:'Dark clouds appear. What is the weather like?',fr:'De gros nuages apparaissent.',instruction:'Décris ce que tu observes dans le ciel, sans annoncer une pluie certaine.',choices:["It's cloudy.","It looks like rain."],joke:'Le ciel prépare peut-être son entrée dramatique.'},
+ {topic:'Fixer un rendez-vous',en:'Your friend can arrive at nine. What do you say?',fr:'Ton ami peut arriver à neuf heures.',instruction:'Confirme l’heure du rendez-vous avec une phrase utile dans la vraie vie.',choices:["Let's meet at nine.","See you at nine o'clock."],joke:'Cette fois, le rendez-vous a une heure officielle.'},
+ {topic:'S’adapter à la pluie',en:'It starts raining. What should you tell your friend?',fr:'La pluie commence pendant que tu attends.',instruction:'Préviens ton ami du changement de météo et propose un endroit abrité.',choices:["It's raining. I'll wait inside.","Let's meet in the café instead."],joke:'La pluie a invité tout le monde à l’intérieur.'},
+ {topic:'Se retrouver',en:'Your friend says: “I’m at the café door.” What do you reply?',fr:'Ton ami se trouve devant la porte du café.',instruction:'Explique où tu es maintenant ou annonce que tu arrives.',choices:["I'm inside, near the window.","I'm coming outside now."],joke:'Vous n’êtes plus qu’à une porte de la victoire.'},
+ {topic:'Mission accomplie',en:'You found each other! What helped you meet?',fr:'Vous vous êtes enfin retrouvés.',instruction:'Résume en une phrase ce qui vous a permis de vous retrouver : l’heure, le lieu ou la météo.',choices:["We agreed on a time and place.","We changed our plan because of the rain."],joke:'Une heure, un lieu, un parapluie imaginaire : mission accomplie.'}
+ ],
+ room:[
+ {topic:'Mission · clés perdues',en:"You are leaving, but your keys are missing. What do you say?",fr:'Tu dois partir, mais tes clés ont disparu. Que dis-tu ?',instruction:'Tu es près de la porte. Commence par exprimer le problème.',choices:["I can't find my keys.","Where are my keys?"],joke:'Tes clés ont décidé de prendre des vacances.'},
+ {topic:'Observer la table',en:'Could the keys be on the table?',fr:'Les clés pourraient-elles être sur la table ?',instruction:'Tu vois une table près de la porte. Vérifie cette première piste.',choices:['They might be on the table.','Let me check the table.'],joke:'La table est notre premier suspect.'},
+ {topic:'Chercher',en:'You look on the table. What do you see?',fr:'Tu regardes sur la table. Que vois-tu ?',instruction:'Tu trouves plusieurs objets, mais pas encore les clés.',choices:['I can see a phone.','I can see a book.','I can see a bag.','I can see a cup.'],joke:'La table a du monde, mais pas notre invité principal.'},
+ {topic:'Nouvelle piste',en:'The keys are not there. Where do you look next?',fr:'Les clés ne sont pas là. Où regardes-tu ensuite ?',instruction:'Reste près de la porte. Pense à l’endroit où tu poses tes affaires en rentrant.',choices:["I'll check my bag.","I'll look in my coat pocket."],joke:'La piste se précise.'},
+ {topic:'Trouvées !',en:'You find your keys in your bag. What do you say?',fr:'Tu retrouves tes clés dans ton sac. Que dis-tu ?',instruction:'Le problème est résolu. Exprime ton soulagement.',choices:['Here they are!','I found them!'],joke:'Mystère résolu. Les clés ne feront pas de déclaration.'},
+ {topic:'Partir',en:'You have your keys. Are you ready to leave?',fr:'Tu as tes clés. Es-tu prêt à partir ?',instruction:'Tu peux enfin sortir. Annonce ce que tu vas faire.',choices:["I'm ready to go.","Let's go!"],joke:'Départ autorisé !'},
+ {topic:'Un autre jour',en:'Next time, where will you put your keys?',fr:'La prochaine fois, où mettras-tu tes clés ?',instruction:'Choisis une habitude simple pour éviter de les perdre.',choices:["I'll put them near the door.","I'll keep them in my bag."],joke:'Les clés viennent de perdre leur liberté.'}
+ ],
+ kitchen:[
+  {topic:'Mission · un invité',en:'Your guest is thirsty. What do you say?',instruction:'Un ami arrive et aimerait boire quelque chose. Commence par lui proposer ton aide, sans deviner sa boisson.',fr:'Ton invité a soif. Que lui dis-tu ?',choices:['Would you like a drink?','Can I get you something to drink?'],joke:'Mission du jour : accueillir quelqu’un sans lui offrir une casserole.'},
+  {topic:'Comprendre le besoin',en:'Your guest says: “Just water, please.” What do you need?',instruction:'Écoute la demande précise. Repère la boisson avant de chercher le matériel.',fr:'Ton invité dit : « Juste de l’eau, s’il te plaît. » De quoi as-tu besoin ?',choices:['I need some water.','I need a glass of water.'],joke:'Bonne nouvelle : pas besoin d’un diplôme de barista.'},
+  {topic:'Trouver le verre',en:'Where can you find a clean glass?',instruction:'Tu dois servir l’eau. Cherche d’abord un récipient propre, sans perdre de vue ton objectif.',fr:'Où peux-tu trouver un verre propre ?',choices:['I can check the cupboard.','I can look near the sink.','I can check the dishwasher.','I can look on the shelf.'],joke:'Le verre joue à cache-cache. Il a choisi le mauvais jour.'},
+  {topic:'Vérifier',en:'The glass looks dirty. What should you do?',instruction:'Petit imprévu : le premier verre n’est pas propre. Choisis une action utile avant de servir.',fr:'Le verre semble sale. Que devrais-tu faire ?',choices:['I should wash the glass.','I should find a clean glass.'],joke:'Un invité, oui. Un laboratoire de microbes, non.'},
+  {topic:'Demander une précision',en:'Do they want still or sparkling water?',instruction:'Tu as un verre propre. Il reste un détail à clarifier pour respecter la préférence de ton invité.',fr:'Veut-il de l’eau plate ou gazeuse ?',choices:['Would you like still water?','Would you prefer sparkling water?'],joke:'Deux bulles de suspense, et nous y sommes.'},
+  {topic:'Servir',en:'You have the right water. What do you say?',instruction:'La boisson est prête. Termine le service avec une formule naturelle et polie.',fr:'Tu as la bonne eau. Que dis-tu ?',choices:['Here you go.','Here is your water.'],joke:'Service cinq étoiles, sans la facture.'},
+  {topic:'Gérer un imprévu',en:'Oh no! You spilled some water. What now?',instruction:'Un peu d’eau s’est renversée. Garde ton calme : reconnais le problème et propose une solution.',fr:'Oh non ! Tu as renversé de l’eau. Et maintenant ?',choices:["I'm sorry. I'll clean it up.","Don't worry. I'll get a towel."],joke:'La table voulait participer à la dégustation.'},
+  {topic:'Réagir avec attention',en:'Your guest says: “Thank you!” How do you reply?',instruction:'Le problème est réglé et ton invité te remercie. Réponds simplement et chaleureusement.',fr:'Ton invité dit : « Merci ! » Comment réponds-tu ?',choices:["You're welcome.","No problem. Enjoy your drink."],joke:'Le vrai luxe : une réponse naturelle, sans discours.'},
+  {topic:'Transférer dans la vie',en:'Next time someone is thirsty, what can you do?',instruction:'Pense à une situation réelle : au travail, à la maison ou chez un ami. Quelle action pourrais-tu reproduire ?',fr:'La prochaine fois que quelqu’un a soif, que peux-tu faire ?',choices:['I can offer a drink politely.','I can ask what they prefer.','I can solve a small problem calmly.'],joke:'Cette fois, tu as appris quelque chose qui sert vraiment.'}
+ ]
+ ,departure:[
+ {topic:'Mission · départ urgent',en:"You're running late. What do you say?",fr:'Tu es en retard. Que dis-tu ?',instruction:'Tu dois sortir bientôt. Exprime la situation simplement.',choices:["I'm running late!","I need to leave now."],joke:'Le temps court plus vite que toi.'},
+ {topic:'Vérifier',en:'Before you leave, what do you need?',fr:'Avant de partir, de quoi as-tu besoin ?',instruction:'Pense à ce que tu emportes toujours.',choices:['I need my keys.','I need my phone.','I need my bag.','I need my wallet.'],joke:'Inventaire express.'},
+ {topic:'Problème',en:'Your phone is missing. What do you say?',fr:'Ton téléphone a disparu. Que dis-tu ?',instruction:'Un objet important manque. Exprime ce problème.',choices:["I can't find my phone.","Where is my phone?"],joke:'Il était là il y a une seconde, évidemment.'},
+ {topic:'Une piste',en:'Where did you last see your phone?',fr:'Où as-tu vu ton téléphone pour la dernière fois ?',instruction:'Reconstitue tes derniers gestes.',choices:['I left it on the table.','It might be in my bag.'],joke:'Ton cerveau mène l’enquête.'},
+ {topic:'Retrouvé',en:'You find your phone. What do you say?',fr:'Tu retrouves ton téléphone. Que dis-tu ?',instruction:'Tu as résolu le problème. Réagis naturellement.',choices:['I found it!','Here it is!'],joke:'Encore une disparition mystérieuse résolue.'},
+ {topic:'Décision',en:'It is raining outside. What will you do?',fr:'Il pleut dehors. Que vas-tu faire ?',instruction:'Un nouvel imprévu arrive. Adapte ton départ.',choices:["I'll take an umbrella.","I'll wear a raincoat."],joke:'La météo veut aussi participer.'},
+ {topic:'Prévenir',en:'You may be late. What message can you send?',fr:'Tu risques d’être en retard. Quel message peux-tu envoyer ?',instruction:'Préviens poliment la personne qui t’attend.',choices:["Sorry, I'm running a little late.","I'll be there soon."],joke:'Un message vaut mieux qu’une disparition.'},
+ {topic:'Plan B',en:'The bus is delayed. What could you do?',fr:'Le bus est retardé. Que pourrais-tu faire ?',instruction:'Cherche une alternative raisonnable.',choices:["I'll check the next bus.","I can walk instead."],joke:'Même le bus prend son temps.'},
+ {topic:'Mission réussie',en:'You are finally on your way. How do you feel?',fr:'Tu es enfin en route. Comment te sens-tu ?',instruction:'Repense à ce que tu as réussi à résoudre.',choices:["I'm relieved.","I feel ready now."],joke:'Tu as survécu au départ du siècle.'}
+ ]
+};
+const answerTranslations={
+ "The music next door is quite loud.":"La musique à côté est assez forte.",
+ "I can hear loud music from next door.":"J’entends de la musique forte venant de chez le voisin.",
+ "There is a lot of noise coming from next door.":"Il y a beaucoup de bruit venant de l’appartement voisin.",
+ "Hi, sorry to bother you. Can I ask you something?":"Bonjour, désolé de vous déranger. Je peux vous demander quelque chose ?",
+ "Hello, have you got a moment?":"Bonjour, vous avez un instant ?",
+ "Sorry to interrupt. Could we have a quick word?":"Désolé de vous interrompre. Pourrions-nous parler un instant ?",
+ "Could you turn the music down a little, please?":"Pourriez-vous baisser un peu la musique, s’il vous plaît ?",
+ "Would you mind lowering the volume, please?":"Cela vous dérangerait-il de baisser le volume, s’il vous plaît ?",
+ "Could you keep the music a bit quieter?":"Pourriez-vous mettre la musique un peu moins fort ?",
+ "Yes, I can't get to sleep with the music this loud.":"Oui, je n’arrive pas à m’endormir avec la musique aussi forte.",
+ "Yes, I need to get up early tomorrow.":"Oui, je dois me lever tôt demain.",
+ "I'm trying to sleep, but the music is keeping me awake.":"J’essaie de dormir, mais la musique me tient éveillé.",
+ "Do you know roughly what time you will finish?":"Savez-vous à peu près à quelle heure vous terminerez ?",
+ "About what time do you think the music will stop?":"Vers quelle heure pensez-vous que la musique s’arrêtera ?",
+ "Could you tell me when you expect to finish?":"Pourriez-vous me dire quand vous pensez terminer ?",
+ "That would really help, thank you.":"Cela m’aiderait vraiment, merci.",
+ "That sounds fair. Thanks for turning it down.":"Ça me semble raisonnable. Merci de baisser le son.",
+ "I appreciate that. Thank you very much.":"J’apprécie ce geste. Merci beaucoup.",
+ "Yes, that's much better. Thanks!":"Oui, c’est beaucoup mieux. Merci !",
+ "Yes, I can hardly hear it now.":"Oui, je l’entends à peine maintenant.",
+ "That's fine now, thank you.":"Ça va maintenant, merci.",
+ "Could you let me know in advance next time?":"Pourriez-vous me prévenir à l’avance la prochaine fois ?",
+ "Would you mind giving me a heads-up next time?":"Cela vous dérangerait-il de me prévenir la prochaine fois ?",
+ "Could you tell me beforehand if you are having a party?":"Pourriez-vous me dire à l’avance si vous organisez une fête ?",
+ "Thanks for understanding. Have a good evening!":"Merci de votre compréhension. Bonne soirée !",
+ "I really appreciate your help. Good night!":"J’apprécie vraiment votre aide. Bonne nuit !",
+ "Thanks for being considerate. Enjoy the rest of your evening!":"Merci pour votre attention aux autres. Profitez bien du reste de votre soirée !",
+ "Is this washing machine free?":"Cette machine à laver est-elle libre ?",
+ "Can I use this machine?":"Est-ce que je peux utiliser cette machine ?",
+ "Is anyone using this washer?":"Quelqu’un utilise-t-il cette machine ?",
+ "Which setting is best for delicate clothes?":"Quel réglage convient le mieux aux vêtements délicats ?",
+ "Should I use the delicates cycle?":"Est-ce que je devrais utiliser le programme délicat ?",
+ "Can you help me choose a gentle cycle?":"Pouvez-vous m’aider à choisir un programme doux ?",
+ "I'll use the delicates cycle.":"Je vais utiliser le programme délicat.",
+ "I'll choose the gentle setting.":"Je vais choisir le réglage doux.",
+ "I'll start with the delicate wash.":"Je vais commencer avec le lavage délicat.",
+ "The machine has stopped.":"La machine s’est arrêtée.",
+ "It says the door is open.":"C’est écrit que la porte est ouverte.",
+ "The screen shows a door error.":"L’écran affiche une erreur de porte.",
+ "I closed the door, but the error is still there.":"J’ai fermé la porte, mais l’erreur est toujours là.",
+ "I tried closing it again, but it didn't help.":"J’ai essayé de la refermer, mais cela n’a rien changé.",
+ "The message is still showing after I closed it.":"Le message s’affiche toujours après que j’ai fermé la porte.",
+ "Could you take a look at this machine?":"Pourriez-vous jeter un œil à cette machine ?",
+ "Could you help me with this problem?":"Pourriez-vous m’aider avec ce problème ?",
+ "Would you mind checking the machine?":"Est-ce que cela vous dérangerait de vérifier la machine ?",
+ "I'll use the other machine, thanks.":"Je vais utiliser l’autre machine, merci.",
+ "I'd like to try the working machine.":"J’aimerais essayer la machine qui fonctionne.",
+ "That sounds good. I'll move my clothes.":"Ça me va. Je vais déplacer mes vêtements.",
+ "How long will the wash take?":"Combien de temps va durer le lavage ?",
+ "What time should I come back?":"À quelle heure dois-je revenir ?",
+ "When will this cycle finish?":"Quand ce programme sera-t-il terminé ?",
+ "Everything worked this time. Thank you!":"Tout a fonctionné cette fois. Merci !",
+ "My clothes are ready. Thanks for your help.":"Mes vêtements sont prêts. Merci pour votre aide.",
+ "That sorted it out. I really appreciate it.":"Cela a réglé le problème. Je vous en suis très reconnaissant.",
+ "Hi, everyone! I’m new here.":"Bonjour tout le monde ! Je suis nouveau ici.",
+ "Hello! It’s my first time at this workshop.":"Bonjour ! C’est ma première fois à cet atelier.",
+ "Is this your first time here?":"C’est votre première fois ici ?",
+ "Have you done pottery before?":"Avez-vous déjà fait de la poterie ?",
+ "I wanted to try something new.":"Je voulais essayer quelque chose de nouveau.",
+ "I thought it would be fun to learn a new skill.":"Je pensais que ce serait amusant d’apprendre une nouvelle compétence.",
+ "Could you show me how to do it?":"Pourriez-vous me montrer comment faire ?",
+ "Can you demonstrate that again, please?":"Pouvez-vous refaire la démonstration, s’il vous plaît ?",
+ "Could you say that a little more slowly?":"Pourriez-vous dire cela un peu plus lentement ?",
+ "Sorry, could you repeat the last step?":"Désolé, pourriez-vous répéter la dernière étape ?",
+ "It’s not perfect, but I like it.":"Ce n’est pas parfait, mais je l’aime bien.",
+ "It looks a bit strange, but I’m proud of it.":"Il a l’air un peu étrange, mais j’en suis fier.",
+ "Thank you! I’m quite pleased with it.":"Merci ! Je suis plutôt content du résultat.",
+ "That’s kind of you to say. Thanks!":"C’est gentil de votre part. Merci !",
+ "I really like what you’ve made.":"J’aime beaucoup ce que vous avez fait.",
+ "You’re doing well. Keep going!":"Vous vous débrouillez bien. Continuez !",
+ "I really enjoyed this. See you next time!":"J’ai beaucoup aimé. À la prochaine !",
+ "Would you like to come back next week?":"Est-ce que vous aimeriez revenir la semaine prochaine ?",
+
+ "My parcel hasn't arrived.":"Mon colis n'est pas arrivé.",
+ "It says delivered, but I can't find it.":"C'est marqué livré, mais je ne le trouve pas.",
+ "I'll check behind the bin.":"Je vais regarder derrière la poubelle.",
+ "I'll look near the side gate.":"Je vais regarder près du portail latéral.",
+ "That's not my front door.":"Ce n'est pas ma porte d'entrée.",
+ "The photo shows a different house.":"La photo montre une autre maison.",
+ "Did a parcel arrive for me?":"Un colis est-il arrivé pour moi ?",
+ "Have you seen a parcel with my name on it?":"Avez-vous vu un colis à mon nom ?",
+ "I think it was delivered to the wrong address.":"Je pense qu'il a été livré à la mauvaise adresse.",
+ "It may be at another house.":"Il est peut-être dans une autre maison.",
+ "My parcel says delivered, but I haven't received it.":"Mon colis est marqué livré, mais je ne l'ai pas reçu.",
+ "Could you help me find my missing parcel?":"Pourriez-vous m'aider à retrouver mon colis ?",
+ "Yes, I have my order number here.":"Oui, j'ai mon numéro de commande ici.",
+ "Of course. I can give you the reference.":"Bien sûr. Je peux vous donner la référence.",
+ "Could you arrange another delivery, please?":"Pourriez-vous organiser une nouvelle livraison, s'il vous plaît ?",
+ "Could you tell me when it will be delivered?":"Pourriez-vous me dire quand il sera livré ?",
+ "Thank you for sorting this out.":"Merci d'avoir réglé ce problème.",
+ "That works for me. Thanks for your help!":"Ça me convient. Merci pour votre aide !",
+  "Could I have a tea and a croissant, please?":"Je pourrais avoir un thé et un croissant, s’il vous plaît ?",
+  "I'd like a tea and a croissant, please.":"Je voudrais un thé et un croissant, s’il vous plaît.",
+  "How much is it altogether?":"Combien ça fait en tout ?",
+  "How much does that cost?":"Combien ça coûte ?",
+  "That's okay. Could I have a muffin instead?":"Ce n’est pas grave. Je pourrais avoir un muffin à la place ?",
+  "No problem. Do you have any toast?":"Pas de souci. Vous avez du pain grillé ?",
+  "Actually, I ordered tea, not coffee.":"En fait, j’ai commandé du thé, pas du café.",
+  "Sorry, I asked for tea, please.":"Pardon, j’avais demandé du thé, s’il vous plaît.",
+  "Excuse me, this isn't what I ordered.":"Excusez-moi, ce n’est pas ce que j’ai commandé.",
+  "Could you change it for tea, please?":"Pourriez-vous le remplacer par du thé, s’il vous plaît ?",
+  "Can I pay by card, please?":"Je peux payer par carte, s’il vous plaît ?",
+  "Do you take contactless payments?":"Vous acceptez le paiement sans contact ?",
+  "I think there's a mistake on the bill.":"Je pense qu’il y a une erreur sur l’addition.",
+  "I only ordered one muffin, not two.":"J’ai commandé un seul muffin, pas deux.",
+  "Could you correct the bill, please?":"Pourriez-vous corriger l’addition, s’il vous plaît ?",
+  "No worries. Could I have the updated total?":"Pas de souci. Pourrais-je avoir le nouveau total ?",
+  "Thank you for your help. Have a nice day!":"Merci pour votre aide. Bonne journée !",
+  "Thanks! Everything is sorted now.":"Merci ! Tout est réglé maintenant.",
+ "I'm near the train station.":"Je suis près de la gare.",
+ "I'm outside the library.":"Je suis devant la bibliothèque.",
+ "What time is it?":"Quelle heure est-il ?",
+ "Do you have the time?":"Tu as l’heure ?",
+ "It's eight thirty.":"Il est huit heures trente.",
+ "It's half past eight.":"Il est huit heures et demie.",
+ "I'm outside the station.":"Je suis devant la gare.",
+ "I'm inside the café.":"Je suis à l’intérieur du café.",
+ "It's cloudy.":"Le ciel est nuageux.",
+ "It looks like rain.":"On dirait qu’il va pleuvoir.",
+ "Let's meet at nine.":"Retrouvons-nous à neuf heures.",
+ "See you at nine o'clock.":"À neuf heures !",
+ "It's raining. I'll wait inside.":"Il pleut. Je vais attendre à l’intérieur.",
+ "Let's meet in the café instead.":"Retrouvons-nous plutôt dans le café.",
+ "I'm inside, near the window.":"Je suis à l’intérieur, près de la fenêtre.",
+ "I'm coming outside now.":"Je sors tout de suite.",
+ "We agreed on a time and place.":"Nous nous sommes mis d’accord sur une heure et un lieu.",
+ "We changed our plan because of the rain.":"Nous avons changé notre programme à cause de la pluie.",
+ "I can't find my keys.":"Je ne trouve pas mes clés.",
+ "Where are my keys?":"Où sont mes clés ?",
+ "They might be on the table.":"Elles sont peut-être sur la table.",
+ "Let me check the table.":"Laisse-moi vérifier la table.",
+ "I can see a bag.":"Je vois un sac.",
+ "I can see a cup.":"Je vois une tasse.",
+ "I'll check my bag.":"Je vais regarder dans mon sac.",
+ "I'll look in my coat pocket.":"Je vais regarder dans ma poche de manteau.",
+ "Here they are!":"Les voilà !",
+ "I found them!":"Je les ai trouvées !",
+ "I'm ready to go.":"Je suis prêt à partir.",
+ "Let's go!":"Allons-y !",
+ "I'll put them near the door.":"Je les mettrai près de la porte.",
+ "I'll keep them in my bag.":"Je les garderai dans mon sac.",
+ "I'm running late!":"Je suis en retard !",
+ "I need to leave now.":"Je dois partir maintenant.",
+ "I need my keys.":"J’ai besoin de mes clés.",
+ "I need my phone.":"J’ai besoin de mon téléphone.",
+ "I need my bag.":"J’ai besoin de mon sac.",
+ "I need my wallet.":"J’ai besoin de mon portefeuille.",
+ "I can't find my phone.":"Je ne trouve pas mon téléphone.",
+ "Where is my phone?":"Où est mon téléphone ?",
+ "I left it on the table.":"Je l’ai laissé sur la table.",
+ "It might be in my bag.":"Il est peut-être dans mon sac.",
+ "I found it!":"Je l’ai trouvé !",
+ "Here it is!":"Le voilà !",
+ "I'll take an umbrella.":"Je vais prendre un parapluie.",
+ "I'll wear a raincoat.":"Je vais mettre un imperméable.",
+ "Sorry, I'm running a little late.":"Désolé, je suis un peu en retard.",
+ "I'll be there soon.":"Je serai bientôt là.",
+ "I'll check the next bus.":"Je vais vérifier le prochain bus.",
+ "I can walk instead.":"Je peux marcher à la place.",
+ "I'm relieved.":"Je suis soulagé.",
+ "I feel ready now.":"Je me sens prêt maintenant.",
+
+ "Would you like a drink?":"Veux-tu boire quelque chose ?",
+ "Can I get you something to drink?":"Puis-je te proposer quelque chose à boire ?",
+ "I need some water.":"J’ai besoin d’eau.",
+ "I need a glass of water.":"J’ai besoin d’un verre d’eau.",
+ "I can check the cupboard.":"Je peux regarder dans le placard.",
+ "I can look near the sink.":"Je peux regarder près de l’évier.",
+ "I can check the dishwasher.":"Je peux vérifier le lave-vaisselle.",
+ "I can look on the shelf.":"Je peux regarder sur l’étagère.",
+ "I should wash the glass.":"Je devrais laver le verre.",
+ "I should find a clean glass.":"Je devrais trouver un verre propre.",
+ "Would you like still water?":"Veux-tu de l’eau plate ?",
+ "Would you prefer sparkling water?":"Préférerais-tu de l’eau gazeuse ?",
+ "Here you go.":"Voilà pour toi.",
+ "Here is your water.":"Voici ton eau.",
+ "I'm sorry. I'll clean it up.":"Désolé, je vais nettoyer.",
+ "Don't worry. I'll get a towel.":"Ne t’inquiète pas, je vais chercher une serviette.",
+ "You're welcome.":"Avec plaisir.",
+ "No problem. Enjoy your drink.":"Pas de souci. Bonne dégustation !",
+ "I can offer a drink politely.":"Je peux proposer une boisson poliment.",
+ "I can ask what they prefer.":"Je peux demander ce qu’ils préfèrent.",
+ "I can solve a small problem calmly.":"Je peux résoudre calmement un petit problème.",
+
+ "I'm sitting.":"Je suis assis(e).",
+ "I'm standing.":"Je suis debout.",
+ 'I can see a table.':'Je peux voir une table.',
+ 'I can see a window.':'Je peux voir une fenêtre.',
+ 'I can see a lamp.':'Je peux voir une lampe.',
+ 'I can see a door.':'Je peux voir une porte.',
+ 'I can see a chair.':'Je peux voir une chaise.',
+ 'I can see a book.':'Je peux voir un livre.',
+ 'I can see a phone.':'Je peux voir un téléphone.',
+ 'I can see a clock.':'Je peux voir une horloge.',
+ 'I can see a picture.':'Je peux voir une image.',
+ 'Yes, it is near me.':'Oui, c’est près de moi.',
+ 'No, it is far away.':'Non, c’est loin.',
+ 'Yes, I can touch the table.':'Oui, je peux toucher la table.',
+ 'Yes, there is something on the table.':'Oui, il y a quelque chose sur la table.',
+ 'No, the table is empty.':'Non, la table est vide.',
+ 'Yes, my hands are on the table.':'Oui, mes mains sont sur la table.',
+ 'No, my hands are off the table.':'Non, mes mains ne sont pas sur la table.',
+ 'Yes, I can see it clearly.':'Oui, je la vois clairement.',
+ "No, I can't see it clearly.":'Non, je ne la vois pas clairement.',
+ "It's dark near the table.":'Il fait sombre près de la table.',
+ "It's bright near the table.":'Il fait clair près de la table.',
+ "No, I can't touch the table.":'Non, je ne peux pas toucher la table.',
+ "It's dark.":'Il fait sombre.',
+ "It's bright.":'Il fait clair.',
+ "Yes, I'm in the kitchen.":'Oui, je suis dans la cuisine.',
+ "No, I'm in another room.":'Non, je suis dans une autre pièce.',
+ 'Yes, I can see a cup.':'Oui, je peux voir une tasse.',
+ "No, I can't see a cup.":'Non, je ne vois pas de tasse.',
+ "Yes, I'm hungry.":'Oui, j’ai faim.',
+ "No, I'm not hungry.":'Non, je n’ai pas faim.',
+ 'Yes, I can drink water.':'Oui, je peux boire de l’eau.',
+ 'No, not right now.':'Non, pas maintenant.'
+};
+
+const $=id=>document.getElementById(id), voiceSupported=('speechSynthesis'in window)&&('SpeechSynthesisUtterance'in window);
+let recorder=null, recordingStream=null, recordingChunks=[], recordingUrl=null;
+function stopRecording(){if(recorder&&recorder.state==='recording')recorder.stop()}
+function releaseMic(){if(recordingStream){recordingStream.getTracks().forEach(t=>t.stop());recordingStream=null}}
+function discardRecording(){stopRecording();releaseMic();if(recordingUrl)URL.revokeObjectURL(recordingUrl);recordingUrl=null;state.recordingBlob=null}
+
+// Les interventions ne sont pas un tirage décoratif : elles correspondent à des enjeux narratifs précis.
+// Une aventure ne déclenche une intervention que si la scène et la durée lui donnent un sens.
+const ADVENTURE_BEATS={
+ neighbour_noise:{4:{title:"ET TOI, TU FERAIS QUOI ?",hint:"« Bientôt » n’est pas une heure précise. Demander un horaire permet de choisir une solution réaliste."},7:{title:"VOILÀ POURQUOI ÇA TE CONCERNE",hint:"Un accord concret aujourd’hui et une information à l’avance demain peuvent éviter une nouvelle tension."}},
+ laundrette:{0:{title:"IMAGINE LA SCÈNE",hint:"Tu veux laver tes vêtements sans abîmer les tissus. Le premier défi est de choisir le bon programme."},4:{title:"ET TOI, TU FERAIS QUOI ?",hint:"Tu as déjà essayé une action simple et le problème continue. Il est utile de dire ce que tu as fait avant de demander de l’aide."},6:{title:"VOILÀ POURQUOI ÇA TE CONCERNE",hint:"Quand un équipement tombe en panne, savoir accepter une solution de remplacement t’aide à poursuivre ta journée."}},
+ workshop:{0:{title:"IMAGINE LA SCÈNE",hint:"Tu arrives dans un groupe inconnu. Un simple bonjour suffit pour commencer."},4:{title:"ET TOI TU FERAIS QUOI ?",hint:"Tu n’as pas compris une consigne. Demander de répéter est une vraie compétence."},7:{title:"VOILÀ POURQUOI ÇA TE CONCERNE",hint:"Encourager et accepter un compliment aide à créer des liens dans toutes les activités collectives."}},
+ parcel:{0:{title:'IMAGINE LA SCÈNE',hint:'Le suivi dit « livré », mais le colis manque. Tu vas chercher des indices avant de demander de l’aide.'},4:{title:'ET TOI TU FERAIS QUOI ?',hint:'La photo montre une autre porte. Comment expliquerais-tu le problème sans accuser quelqu’un ?'},7:{title:'VOILÀ POURQUOI ÇA TE CONCERNE',hint:'Savoir demander une nouvelle livraison sert aussi pour un remboursement ou une commande incomplète.'}},
+ cafe:{0:{title:"IMAGINE LA SCÈNE",hint:"Tu veux un petit-déjeuner tranquille. Ton objectif est de commander et de payer correctement."},4:{title:"ET TOI TU FERAIS QUOI ?",hint:"Le serveur a préparé la mauvaise boisson. Comment expliquerais-tu l’erreur sans être brusque ?"},6:{title:"VOILÀ POURQUOI ÇA TE CONCERNE",hint:"Vérifier une addition est utile au café, au restaurant ou à l’hôtel."}},
+ room:{2:{title:'IMAGINE LA SCÈNE',hint:'Tu dois sortir et tes clés sont introuvables. Tu examines les objets près de la porte.'},3:{title:'ET TOI TU FERAIS QUOI ?',hint:'La première piste est fausse. Où chercherais-tu sans paniquer ?'}},
+ departure:{2:{title:'VOILÀ POURQUOI ÇA TE CONCERNE',hint:'Perdre un objet juste avant de partir arrive à tout le monde. Savoir expliquer le problème aide à demander de l’aide.'},5:{title:'ET TOI TU FERAIS QUOI ?',hint:'Tu es pressé et la pluie commence. Quel choix ferais-tu ?'}},
+ kitchen:{
+  0:{title:'IMAGINE LA SCÈNE',hint:'Un ami arrive chez toi après une longue marche. Il a soif. Ton objectif : lui offrir à boire naturellement en anglais.'},
+  3:{title:'ET TOI TU FERAIS QUOI ?',hint:'Le verre est sale. Dans la vraie vie, comment aiderais-tu ton invité sans le faire attendre ?'},
+  6:{title:'VOILÀ POURQUOI ÇA TE CONCERNE',hint:'Un petit accident peut arriver chez toi, au travail ou en voyage. Savoir s’excuser et proposer une solution évite bien des malentendus.'},
+  8:{title:'POUR RÉSUMER',hint:'Tu as accueilli, écouté, vérifié, servi et réagi à un imprévu. Quelle étape réutiliseras-tu demain ?'}
+ }
+};
+const stored=(()=>{try{return JSON.parse(localStorage.getItem('mycompanion-v5')||'{}')}catch{return {}}})();
+const state={path:scenes[stored.path]?stored.path:'room',length:['short','medium','long'].includes(stored.length)?stored.length:'medium',step:0,answers:{},draws:{},log:[],promptAt:{},recall:'',recallMode:'',recordingBlob:null,phase:'scene',adventure:stored.adventure===true};
+$('path').value=state.path;$('length').value=state.length;$('humor').value=stored.humor||'playful';$('speed').value=stored.speed||'1';$('auto').checked=stored.auto!==false;$('adventure').checked=state.adventure;
+function savePrefs(){localStorage.setItem('mycompanion-v5',JSON.stringify({path:state.path,length:state.length,humor:$('humor').value,speed:$('speed').value,auto:$('auto').checked,adventure:state.adventure}))}
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function total(){return Math.min(scenes[state.path].length,state.length==='short'?3:state.length==='medium'?6:999)}
+function prepare(){discardRecording();state.step=0;state.answers={};state.draws={};state.log=[];state.recall='';state.recallMode='';state.phase='scene';state.promptAt={};const n=total();if(state.adventure){const beats=ADVENTURE_BEATS[state.path]||{};const eligible=Object.keys(beats).map(Number).filter(i=>i<n);const selected=shuffle(eligible).slice(0,n<=3?1:n<=6?1:2);selected.forEach(i=>state.promptAt[i]=beats[i])}render()}
+// Les annonces françaises sont prononcées en casse normale : les majuscules peuvent être épelées par certaines voix.
+const frenchAnnouncements={
+ 'DIS-MOI CE QUE TU AS RETENU':'Dis-moi ce que tu as retenu.',
+ 'VOILÀ CE QUE JE VEUX QUE TU RETIENNES':'Voilà ce que je veux que tu retiennes.'
+};
+let availableVoices=[];
+function refreshVoices(){if(voiceSupported)availableVoices=speechSynthesis.getVoices()}
+if(voiceSupported){refreshVoices();speechSynthesis.addEventListener?.('voiceschanged',refreshVoices)}
+function speak(text,lang='en-GB'){
+ if(!voiceSupported)return;
+ speechSynthesis.cancel();
+ const french=lang.toLowerCase().startsWith('fr');
+ const spoken=french?(frenchAnnouncements[text]||text):text;
+ const u=new SpeechSynthesisUtterance(spoken);
+ u.lang=lang;
+ u.rate=french?0.88:Number($('speed').value);
+ u.pitch=1;
+ refreshVoices();
+ const voices=availableVoices;
+ const matches=voices.filter(v=>v.lang.toLowerCase().startsWith(french?'fr':'en'));
+ u.voice=matches.find(v=>v.lang.toLowerCase()===lang.toLowerCase())||matches.find(v=>v.localService)||matches[0]||null;
+ // Sans voix française installée, le navigateur choisit la meilleure voix disponible pour fr-FR.
+ speechSynthesis.speak(u);
+}
+function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e}
+function btn(text,handler,cls='btn'){const b=el('button',cls,text);b.type='button';b.onclick=handler;return b}
+function add(parent,...nodes){nodes.forEach(n=>parent.append(n));return parent}
+function draw(key,scene){let d=state.draws[key];if(!d){d={remaining:shuffle(scene.choices.map((_,i)=>i)),index:null,seen:0,cycle:1};state.draws[key]=d;advanceDraw(d,scene)}return d}
+function advanceDraw(d,scene){if(!d.remaining.length){d.remaining=shuffle(scene.choices.map((_,i)=>i));if(d.remaining.length>1&&d.remaining[0]===d.index){[d.remaining[0],d.remaining[1]]=[d.remaining[1],d.remaining[0]]}d.cycle++;d.seen=0}d.index=d.remaining.shift();d.seen++}
+function speakScene(){speak(scenes[state.path][state.step].en)}
+function render(){if(hasStarted&&!state.isReview&&state.phase!=='summary')saveProgress();if(voiceSupported)speechSynthesis.cancel();savePrefs();const n=total(),isScene=state.phase==='scene';$('scene-name').textContent=({room:'Mon petit monde',kitchen:'Un invité surprise',departure:'Je suis en retard !',meeting:'On se retrouve où ?',cafe:'Oups, ce n’est pas ma commande !',parcel:'Mon colis a disparu !',workshop:'Ma première activité en groupe !',neighbour_noise:'La musique du voisin m’empêche de dormir !',laundrette:'La machine s’arrête à la laverie !',review:'Révision'}[state.path]);$('counter').textContent=isScene?`Scène ${state.step+1} / ${n}`:'Bilan final';$('progress').style.width=(isScene?(state.step+1)/n*100:100)+'%';$('prev').disabled=isScene&&state.step===0;$('next').textContent=isScene?(state.step===n-1?'Terminer le parcours →':'Suivant →'):(state.phase==='recall'?'Voir mon bilan →':'Nouveau parcours ↺');$('phase').textContent=isScene?'🇬🇧 ENGLISH FIRST':'BILAN';$('topic').textContent=isScene?scenes[state.path][state.step].topic:'Mémoire';const content=$('content');content.replaceChildren();if(!isScene){renderFinal(content);return}const s=scenes[state.path][state.step],key=state.path+':'+state.step;
+add(content,el('h2','english',s.en),btn('🔊 Listen',()=>speak(s.en),'btn primary'),el('p','instruction',s.instruction),el('p','translation',s.fr));
+if(state.promptAt[state.step]){const p=state.promptAt[state.step],box=el('div','prompt');add(box,el('strong','',p.title),el('p','',p.hint));content.append(box)}
+if(s.joke&&$('humor').value!=='gentle')content.append(el('p','hint',s.joke));
+const choices=el('div','answer-box'),one=s.choices.length>2,d=one?draw(key,s):null,visible=one?[s.choices[d.index]]:s.choices;
+visible.forEach(c=>{const b=el('button','choice'+(state.answers[key]===c?' selected':''));add(b,el('span','',c),el('span','fr',answerTranslations[c]||''));b.onclick=()=>{state.answers[key]=c;saveProgress();render();speak(c)};choices.append(b)});
+if(one){choices.append(btn('↻ Something else',()=>{advanceDraw(d,s);render()},'choice'));choices.append(el('p','subtle',`Suggestions découvertes : ${d.seen} / ${s.choices.length} · Tour ${d.cycle}`))}
+const extra=el('div','buttons');extra.append(btn('✎ My own answer',()=>{const area=$('custom');area.classList.toggle('hidden');area.querySelector('textarea').focus()}));choices.append(extra);
+const custom=el('div','hidden');custom.id='custom';const input=el('textarea');input.placeholder='Write your own answer in English…';input.value=state.answers[key]&&!s.choices.includes(state.answers[key])?state.answers[key]:'';add(custom,input,btn('Use my answer',()=>{const value=input.value.trim();if(!value)return;state.answers[key]=value;saveProgress();render();speak(value)},'btn primary'));choices.append(custom);content.append(choices);
+if(state.answers[key])content.append(el('p','notice','✓ Your answer: '+state.answers[key]));
+if($('auto').checked)speakScene()}
+// Une phrase de confiance adaptée à la mission et à la durée choisie.
+// Elle n'est lue qu'à la demande : la narration automatique reste en anglais.
+const wonderByPath={
+ neighbour_noise:[["I wonder how I make a polite request so naturally in English.", "Je me demande comment je fais pour demander quelque chose aussi naturellement et poliment en anglais."], ["I wonder how I explain what I need and reach an agreement so calmly.", "Je me demande comment je fais pour expliquer ce dont j’ai besoin et trouver un accord aussi calmement."], ["I wonder how I handle a difficult conversation so confidently while keeping a good relationship with my neighbour.", "Je me demande comment je fais pour gérer une conversation délicate avec autant d’assurance tout en gardant de bonnes relations avec mon voisin."]],
+ laundrette:[["I wonder how I choose the right wash so easily in English.","Je me demande comment je fais pour choisir aussi facilement le bon programme de lavage en anglais."],["I wonder how I explain a machine problem so calmly and ask for help.","Je me demande comment je fais pour expliquer aussi calmement un problème de machine et demander de l’aide."],["I wonder how I handle an unexpected problem so confidently, from choosing a wash to finding a solution.","Je me demande comment je fais pour gérer un imprévu avec autant d’assurance, du choix du programme jusqu’à la solution."]],
+ room:[['I wonder how I always manage to find what I need.','Je me demande comment je fais pour toujours retrouver ce dont j’ai besoin.'],['I wonder how I stay so calm when I lose something.','Je me demande comment je fais pour rester aussi calme quand je perds quelque chose.'],['I wonder how I manage to solve little problems so confidently.','Je me demande comment je fais pour résoudre les petits problèmes avec autant d’assurance.']],
+ kitchen:[['I wonder how I make guests feel so welcome.','Je me demande comment je fais pour mettre mes invités aussi à l’aise.'],['I wonder how I manage to help my guests so naturally.','Je me demande comment je fais pour aider mes invités aussi naturellement.'],['I wonder how I stay so calm and helpful when something goes wrong.','Je me demande comment je fais pour rester aussi calme et serviable quand il y a un imprévu.']],
+ departure:[['I wonder how I get ready so quickly.','Je me demande comment je fais pour me préparer aussi rapidement.'],['I wonder how I manage to stay calm when I am running late.','Je me demande comment je fais pour rester aussi calme quand je suis en retard.'],['I wonder how I handle unexpected problems so confidently.','Je me demande comment je fais pour gérer les imprévus avec autant d’assurance.']],
+ meeting:[['I wonder how I explain where I am so clearly.','Je me demande comment je fais pour expliquer aussi clairement où je me trouve.'],['I wonder how I arrange meetings so easily in English.','Je me demande comment je fais pour organiser des rendez-vous aussi facilement en anglais.'],['I wonder how I adapt my plans so calmly when the weather changes.','Je me demande comment je fais pour adapter mes projets aussi calmement quand la météo change.']],
+ cafe:[['I wonder how I order so confidently in English.','Je me demande comment je fais pour commander avec autant d’assurance en anglais.'],['I wonder how I explain mistakes so politely.','Je me demande comment je fais pour expliquer les erreurs aussi poliment.'],['I wonder how I handle orders and payments so comfortably in English.','Je me demande comment je fais pour gérer les commandes et les paiements aussi facilement en anglais.']],
+ workshop:[['I wonder how I feel so comfortable introducing myself to new people.','Je me demande comment je fais pour être aussi à l’aise quand je me présente à de nouvelles personnes.'],['I wonder how I learn new skills so calmly, even when I need to ask questions.','Je me demande comment je fais pour apprendre de nouvelles choses aussi sereinement, même quand j’ai besoin de poser des questions.'],['I wonder how I feel so comfortable meeting new people, learning new things and encouraging others.','Je me demande comment je fais pour être aussi à l’aise quand je rencontre de nouvelles personnes, apprends de nouvelles choses et encourage les autres.']],
+ parcel:[['I wonder how I explain a missing delivery so clearly.','Je me demande comment je fais pour expliquer aussi clairement qu’un colis manque.'],['I wonder how I ask for help so calmly when a parcel goes missing.','Je me demande comment je fais pour demander de l’aide aussi calmement quand un colis disparaît.'],['I wonder how I solve delivery problems so confidently in English.','Je me demande comment je fais pour résoudre les problèmes de livraison avec autant d’assurance en anglais.']]
+};
+function addWonder(content){
+ const options=wonderByPath[state.path];if(!options)return;
+ const index=state.length==='short'?0:state.length==='medium'?1:2;
+ const [english,french]=options[index],panel=el('div','recap');
+ add(panel,el('strong','','✨ Une phrase pour prendre confiance'),el('h3','english',english),el('p','translation',french));
+ const controls=el('div','buttons');
+ controls.append(btn('🔊 Listen in English',()=>speak(english,'en-GB'),'btn primary'));
+ controls.append(btn('🔊 Écouter en français',()=>speak(french,'fr-FR')));
+ panel.append(controls);content.append(panel);
+}
+function renderFinal(content){if(state.phase==='recall'){
+add(content,el('h2','english','What do you remember?'),el('p','instruction','DIS-MOI CE QUE TU AS RETENU'),el('p','translation',({room:'Sans regarder les scènes, raconte comment tu as retrouvé les clés. Quelles phrases pourrais-tu réutiliser demain ?',kitchen:'Sans regarder les scènes, raconte comment tu accueillerais un invité qui a soif. Quelles phrases utiliserais-tu ?',departure:'Sans regarder les scènes, raconte comment tu t’es préparé à sortir malgré les imprévus.',meeting:'Sans regarder les scènes, explique où tu étais, à quelle heure vous aviez rendez-vous et comment la pluie a changé vos plans.',cafe:'Sans regarder les scènes, raconte comment tu as commandé, corrigé une erreur et vérifié ton addition.',parcel:'Sans regarder les scènes, explique pourquoi ton colis manquait, où tu as cherché et quelle solution tu as obtenue.',workshop:'Sans regarder les scènes, raconte comment tu as rencontré quelqu’un, demandé une explication et encouragé ton voisin.',neighbour_noise:state.length==='short'?"Sans regarder les scènes, explique en anglais ce qui te gêne et comment tu as demandé poliment de baisser la musique.":state.length==='medium'?"Sans regarder les scènes, raconte comment tu as demandé de baisser la musique, expliqué pourquoi et trouvé un compromis.":"Sans regarder les scènes, raconte la conversation complète : le bruit, ta demande, le compromis et ce que vous avez décidé pour la prochaine fois.",laundrette:state.length==='short'?"Sans regarder les scènes, explique en anglais comment tu as trouvé une machine libre et choisi un programme.":state.length==='medium'?"Sans regarder les scènes, raconte comment tu as choisi un programme, signalé une erreur et demandé de l’aide.":"Sans regarder les scènes, raconte comment tu as choisi un programme, signalé la panne, trouvé une autre machine et terminé ton lavage."}[state.path])));
+const row=el('div','buttons'),status=el('p','subtle',''),area=el('textarea');area.id='recallText';area.placeholder='I remember… / Je me souviens…';area.value=state.recall;area.oninput=()=>{state.recall=area.value};
+const recordButton=btn('🎙️ S’enregistrer',async()=>{
+if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){showAudioFallback('Le microphone direct est bloqué ici (souvent avec un fichier local). Essaie « Enregistrer avec le téléphone » ou ouvre l’application en HTTPS.');return}
+try{
+ if(voiceSupported)speechSynthesis.cancel();
+ discardRecording();recordingChunks=[];
+ recordingStream=await navigator.mediaDevices.getUserMedia({audio:true});
+ if(state.phase!=='recall'){releaseMic();return}
+ recorder=new MediaRecorder(recordingStream);
+ recorder.ondataavailable=e=>{if(e.data.size)recordingChunks.push(e.data)};
+ recorder.onstop=()=>{
+  const blob=new Blob(recordingChunks,{type:recorder.mimeType||'audio/webm'});releaseMic();
+  if(!blob.size)return;
+  state.recordingBlob=blob;recordingUrl=URL.createObjectURL(blob);
+  player.src=recordingUrl;player.hidden=false;listenButton.disabled=false;redoButton.disabled=false;
+  recordButton.disabled=false;stopButton.disabled=true;status.textContent='Enregistrement terminé. Écoute-le ou recommence.';
+ };
+ recorder.start();recordButton.disabled=true;stopButton.disabled=false;listenButton.disabled=true;redoButton.disabled=true;player.hidden=true;status.textContent='🔴 Enregistrement en cours…';
+}catch(e){releaseMic();recordButton.disabled=false;stopButton.disabled=true;showAudioFallback('Microphone refusé ou indisponible. Autorise le micro dans le navigateur, ou utilise l’enregistreur du téléphone.')}
+});
+const stopButton=btn('■ Stop',()=>stopRecording());stopButton.disabled=true;
+const listenButton=btn('▶ Écouter',()=>{if(recordingUrl){player.currentTime=0;player.play().catch(()=>status.textContent='Lecture audio indisponible.')}});listenButton.disabled=!recordingUrl;
+const redoButton=btn('↺ Recommencer',()=>{discardRecording();player.pause();player.removeAttribute('src');player.load();player.hidden=true;listenButton.disabled=true;redoButton.disabled=true;recordButton.disabled=false;stopButton.disabled=true;status.textContent='Prêt pour un nouvel enregistrement.'});redoButton.disabled=!recordingUrl;
+const player=el('audio');player.controls=true;player.hidden=!recordingUrl;if(recordingUrl)player.src=recordingUrl;player.style.width='100%';player.style.marginTop='12px';
+// Solution de secours : sur certains téléphones, le sélecteur audio ouvre l'enregistreur natif.
+const fallbackInput=el('input');fallbackInput.type='file';fallbackInput.accept='audio/*';fallbackInput.setAttribute('capture','user');fallbackInput.className='hidden';
+const fallbackButton=btn('🎙️ Enregistrer avec le téléphone',()=>fallbackInput.click());fallbackButton.classList.add('hidden');
+function showAudioFallback(message){status.textContent=message;fallbackButton.classList.remove('hidden')}
+fallbackInput.onchange=()=>{
+ const file=fallbackInput.files&&fallbackInput.files[0];if(!file)return;
+ discardRecording();state.recordingBlob=file;recordingUrl=URL.createObjectURL(file);
+ player.src=recordingUrl;player.hidden=false;listenButton.disabled=false;redoButton.disabled=false;
+ stopButton.disabled=true;recordButton.disabled=false;
+ status.textContent='Audio ajouté. Tu peux l’écouter ou recommencer.';
+};
+if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){
+ showAudioFallback('Microphone direct indisponible depuis ce fichier. Essaie l’enregistreur du téléphone ou ouvre l’application en HTTPS.');
+}
+row.append(recordButton,stopButton,listenButton,redoButton);
+const audioPanel=el('div'),writePanel=el('div'),picker=el('div','mode-picker');
+add(audioPanel,row,fallbackButton,fallbackInput,player,status,el('p','subtle','L’enregistrement reste dans cette session. Le PDF signale la réponse orale mais ne contient pas le son.'));
+add(writePanel,area,el('p','subtle','Ta réponse écrite sera incluse dans le PDF.'));
+const audioChoice=btn('🎙️ S’enregistrer',()=>choose('audio'));
+const writeChoice=btn('✎ Écrire',()=>choose('write'));
+picker.append(audioChoice,writeChoice);
+function choose(mode){
+ if(recorder&&recorder.state==='recording')stopRecording();
+ if(mode==='write'){discardRecording();player.pause();player.hidden=true;player.removeAttribute('src');player.load();listenButton.disabled=true;redoButton.disabled=true;recordButton.disabled=false;stopButton.disabled=true}
+ if(mode==='audio')state.recall='';
+ state.recallMode=mode;
+ audioPanel.classList.toggle('hidden',mode!=='audio');writePanel.classList.toggle('hidden',mode!=='write');
+ audioChoice.classList.toggle('active',mode==='audio');writeChoice.classList.toggle('active',mode==='write');
+ if(mode==='write')area.focus();
+}
+add(content,picker,audioPanel,writePanel);
+choose(state.recallMode==='audio'?'audio':state.recallMode==='write'?'write':'none');
+return}
+add(content,el('h2','english','What you learned'),el('p','instruction','VOILÀ CE QUE JE VEUX QUE TU RETIENNES'),el('p','translation',({room:'Tu sais exprimer une perte, chercher un objet et dire que tu l’as retrouvé.',kitchen:'Tu sais proposer une boisson, comprendre une demande et réagir à un imprévu.',departure:'Tu sais expliquer un retard, retrouver un objet et adapter ton plan.',meeting:'Tu sais demander et dire l’heure, indiquer où tu es, décrire la météo et adapter un rendez-vous.',cafe:'Tu sais commander, demander un prix, corriger une erreur poliment et vérifier une addition.',parcel:'Tu sais signaler un colis manquant, décrire un lieu et demander une solution au service client.',workshop:'Tu sais faire connaissance, demander de répéter une consigne et échanger des compliments ou des encouragements.',neighbour_noise:state.length==='short'?"Tu sais décrire un bruit gênant, aborder quelqu’un poliment et demander de baisser le volume.":state.length==='medium'?"Tu sais aussi expliquer l’effet du bruit sur toi, demander un horaire précis et accepter un compromis.":"Tu sais mener une conversation délicate sans accuser, vérifier le résultat, prévenir les futurs problèmes et préserver de bonnes relations.",laundrette:state.length==='short'?"Tu sais vérifier si une machine est disponible, demander conseil et choisir un programme adapté.":state.length==='medium'?"Tu sais aussi décrire un arrêt inattendu, expliquer ce que tu as essayé et demander de l’aide.":"Tu sais choisir un programme, expliquer une panne, demander de l’aide, accepter une alternative et confirmer la résolution."}[state.path])));const ul=el('ul','summary');for(let i=0;i<total();i++){const s=scenes[state.path][i],a=state.answers[state.path+':'+i];if(a){const li=el('li','');add(li,el('strong','',a),el('span','subtle',' — '+(answerTranslations[a]||s.fr)));ul.append(li)}else{const li=el('li','',s.en);ul.append(li)}}content.append(ul);const rec=el('div','recap');add(rec,el('strong','','Ce que tu as retenu :'),el('p','',state.recallMode==='audio'?(state.recordingBlob?'Réponse enregistrée à l’oral (audio non intégré au PDF).':'Aucun enregistrement terminé.'):(state.recall.trim()||'Aucune réponse fournie.')));content.append(rec);addWonder(content);if(state.recordingBlob)content.append(el('p','subtle','✓ Une réponse audio a aussi été enregistrée pendant cette session (non incluse dans le PDF).'));const link=el('a','download','⬇ Télécharger tout le dialogue (PDF)');link.href=makePdfUrl();link.download='my-english-companion-dialogue.pdf';content.append(link);content.append(el('p','subtle','Le PDF conserve la hiérarchie visuelle anglais / instructions / traductions, sans les commentaires du compagnon.'))}
+// PDF avec la meme hierarchie que l'ecran : anglais bleu, consigne lisible, traductions discretes.
+// Les plaisanteries, commentaires et interventions du compagnon sont exclus de l'export.
+function makePdfUrl(){
+ const blocks=[{text:'MY ENGLISH COMPANION',kind:'heading'},
+ {text:`${({room:'Mon petit monde',kitchen:'Un invité surprise',departure:'Je suis en retard !',meeting:'On se retrouve où ?',cafe:'Oups, ce n’est pas ma commande !',parcel:'Mon colis a disparu !',workshop:'Ma première activité en groupe !',neighbour_noise:'La musique du voisin m’empêche de dormir !',laundrette:'La machine s’arrête à la laverie !',review:'Révision'}[state.path])} · Parcours ${state.length}`,kind:'meta'}];
+ for(let i=0;i<total();i++){
+  const s=scenes[state.path][i],a=state.answers[state.path+':'+i];
+  blocks.push({text:`SCÈNE ${i+1} — ${s.topic}`,kind:'section'},
+   {text:s.en,kind:'english'},
+   {text:s.instruction,kind:'instruction'},
+   {text:s.fr,kind:'translation'});
+  if(a){blocks.push({text:a,kind:'answer'});if(answerTranslations[a])blocks.push({text:answerTranslations[a],kind:'translation'});}
+  blocks.push({text:'',kind:'gap'});
+ }
+ blocks.push({text:'DIS-MOI CE QUE TU AS RETENU',kind:'section'});
+ if(state.recallMode==='audio')blocks.push({text:state.recordingBlob?'Réponse orale enregistrée (audio non inclus dans le PDF).':'Aucun enregistrement oral terminé.',kind:'instruction'});
+ else blocks.push({text:state.recall.trim()||'Aucune réponse écrite.',kind:'instruction'});
+ blocks.push({text:'VOILÀ CE QUE JE VEUX QUE TU RETIENNES',kind:'section'});
+ for(let i=0;i<total();i++){const s=scenes[state.path][i],a=state.answers[state.path+':'+i];if(a){blocks.push({text:a,kind:'answer'});if(answerTranslations[a])blocks.push({text:answerTranslations[a],kind:'translation'});}else blocks.push({text:s.en,kind:'english'});}
+ const styles={heading:{size:19,color:[.08,.29,.72],leading:25,space:15,font:'F2'},meta:{size:9,color:[.45,.48,.54],leading:13,space:18,font:'F1'},section:{size:10,color:[.30,.34,.40],leading:16,space:9,font:'F2'},english:{size:16,color:[.08,.29,.72],leading:21,space:6,font:'F2'},instruction:{size:11,color:[.20,.24,.30],leading:16,space:5,font:'F1'},translation:{size:8,color:[.53,.56,.61],leading:12,space:8,font:'F1'},answer:{size:13,color:[.08,.29,.72],leading:18,space:5,font:'F2'},gap:{size:8,color:[0,0,0],leading:12,space:8,font:'F1'}};
+ const cp1252=str=>{const bytes=[];for(const c of str){const n=c.codePointAt(0),map={'€':128,'’':146,'‘':145,'“':147,'”':148,'–':150,'—':151,'…':133,'œ':156,'Œ':140,'•':149,'·':183};bytes.push(n<128||n>=160&&n<=255?n:(map[c]||63));}return bytes};
+ const pdfstr=str=>{let out='';for(const b of cp1252(str)){if(b===40||b===41||b===92)out+='\\';out+=String.fromCharCode(b)}return out};
+ function wrap(str,max){const words=str.split(/\s+/),lines=[];let line='';for(const word of words){if(!word)continue;if((line+' '+word).trim().length>max&&line){lines.push(line);line=word}else line=line?line+' '+word:word;}if(line)lines.push(line);return lines.length?lines:[''];}
+ const pages=[[]];let y=796;
+ for(const block of blocks){const st=styles[block.kind],max=Math.floor(96*10/st.size),lines=block.kind==='gap'?['']:wrap(block.text,max);
+  const required=lines.length*st.leading+st.space;
+  if(y-required<53){pages.push([]);y=796;}
+  for(const line of lines){if(block.kind!=='gap')pages[pages.length-1].push({y,text:line,style:st});y-=st.leading;}y-=st.space;
+ }
+ const enc=new TextEncoder(),bytes=[],offsets=[0];const write=str=>bytes.push(...enc.encode(str));const obj=(id,body)=>{offsets[id]=bytes.length;write(`${id} 0 obj\n`);if(typeof body==='string')write(body);else bytes.push(...body);write('\nendobj\n')};
+ write('%PDF-1.4\n');const font1=3+pages.length*2,font2=font1+1;
+ obj(1,'<< /Type /Catalog /Pages 2 0 R >>');obj(2,`<< /Type /Pages /Kids [${pages.map((_,i)=>3+i*2+' 0 R').join(' ')}] /Count ${pages.length} >>`);
+ for(let p=0;p<pages.length;p++){
+  const pageId=3+p*2,streamId=pageId+1;
+  obj(pageId,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 ${font1} 0 R /F2 ${font2} 0 R >> >> /Contents ${streamId} 0 R >>`);
+  let commands='';for(const row of pages[p]){const st=row.style;commands+=`BT /${st.font} ${st.size} Tf ${st.color.join(' ')} rg 44 ${row.y.toFixed(1)} Td (${pdfstr(row.text)}) Tj ET\n`;}
+  commands+=`BT /F1 8 Tf .6 .6 .6 rg 520 28 Td (${p+1} / ${pages.length}) Tj ET\n`;
+  const stream=Uint8Array.from(commands, c=>c.charCodeAt(0)),header=enc.encode(`<< /Length ${stream.length} >>\nstream\n`),footer=enc.encode('\nendstream');obj(streamId,[...header,...stream,...footer]);
+ }
+ obj(font1,'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+ obj(font2,'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+ const xref=bytes.length,count=font2;write(`xref\n0 ${count+1}\n0000000000 65535 f \n`);for(let i=1;i<=count;i++)write(String(offsets[i]).padStart(10,'0')+' 00000 n \n');write(`trailer\n<< /Size ${count+1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);
+ return URL.createObjectURL(new Blob([new Uint8Array(bytes)],{type:'application/pdf'}));
+}
+
+const PROGRESS_KEY='mycompanion-progress-v1', HISTORY_KEY='mycompanion-history-v1';
+const readStore=k=>{try{return JSON.parse(localStorage.getItem(k)||'null')}catch{return null}};
+function saveProgress(){if(state.isReview)return;try{localStorage.setItem(PROGRESS_KEY,JSON.stringify({path:state.path,length:state.length,step:state.step,answers:state.answers,draws:state.draws,phase:state.phase,adventure:state.adventure,promptAt:state.promptAt}))}catch(e){}}
+function archiveSession(){if(state.isReview)return;let h=readStore(HISTORY_KEY)||[];for(let i=0;i<total();i++){const a=state.answers[state.path+':'+i];if(a)h.push({path:state.path,en:scenes[state.path][i].en,answer:a,translation:answerTranslations[a]||''})}try{localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-100)));localStorage.removeItem(PROGRESS_KEY)}catch(e){}}
+function showHome(){if(state.phase!=='summary'&&hasStarted&&!state.isReview)saveProgress();if(voiceSupported)speechSynthesis.cancel();$('home').classList.remove('hidden');$('learning').classList.add('hidden');$('setup-overlay').classList.add('hidden');const saved=readStore(PROGRESS_KEY);$('continue').disabled=false;const completed=(readStore(HISTORY_KEY)||[]).length>0;$('continue').querySelector('strong').textContent=saved?'Continuer mon aventure':completed?'Commencer une aventure':'Commencer ma première aventure';$('continue').querySelector('small').textContent=saved?'Reprendre exactement à la dernière scène.':completed?'Choisir une nouvelle mission à ton rythme.':'Découvrir Mon petit monde, sans configuration compliquée.';$('home-status').textContent=saved?'Une aventure en cours est disponible.':completed?'Bravo pour tes parcours terminés ! Choisis la suite ou révise tes acquis.':'Choisis une première aventure ou essaie une mini-révision.';}
+$('continue').onclick=()=>{const p=readStore(PROGRESS_KEY);if(!p||!scenes[p.path]){if(!(readStore(HISTORY_KEY)||[]).length)$('path').value='room';openSetup();return;}Object.assign(state,{...p,isReview:false,recordingBlob:null,recall:'',recallMode:''});$('path').value=state.path;$('length').value=state.length;$('adventure').checked=state.adventure;hasStarted=true;$('home').classList.add('hidden');$('learning').classList.remove('hidden');render()};
+$('discover').onclick=()=>openSetup();
+$('review').onclick=()=>{const h=readStore(HISTORY_KEY)||[];const unique=[...new Map(h.map(x=>[x.en,x])).values()];const starter=[{path:'room',en:'Where are my keys?',answer:'I can look on the table.',translation:'Je peux regarder sur la table.'},{path:'kitchen',en:'Your guest is thirsty. What do you say?',answer:'Would you like a drink?',translation:'Veux-tu boire quelque chose ?'},{path:'departure',en:'Your phone is missing. What do you say?',answer:"I can't find my phone.",translation:'Je ne trouve pas mon téléphone.'}];const chosen=unique.length?shuffle(unique).slice(0,Math.min(3,unique.length)):starter;state.isReview=true;state.reviewScenes=chosen.map(x=>({topic:'Révision · dans la vraie vie',en:x.en,instruction:'Retrouve une expression déjà rencontrée, sans regarder la traduction avant de réfléchir.',fr:'Une situation que tu connais déjà.',choices:[x.answer],joke:'Tu connais déjà cette situation.'}));state.path='review';scenes.review=state.reviewScenes;state.length='short';state.step=0;state.answers={};state.draws={};state.promptAt={};state.phase='scene';hasStarted=true;$('home').classList.add('hidden');$('learning').classList.remove('hidden');render()};
+$('next').onclick=()=>{if(state.phase==='scene'){if(state.step<total()-1){state.step++;render()}else{state.phase='recall';saveProgress();render();speak('DIS-MOI CE QUE TU AS RETENU','fr-FR')}}else if(state.phase==='recall'){const a=$('recallText');if(state.recallMode==='write')state.recall=a.value;else state.recall='';if(recorder&&recorder.state==='recording'){stopRecording();return}state.phase='summary';archiveSession();render();speak('VOILÀ CE QUE JE VEUX QUE TU RETIENNES','fr-FR')}else showHome()};$('prev').onclick=()=>{if(recorder&&recorder.state==='recording'){stopRecording();return}if(state.phase==='summary'){state.phase='recall';render()}else if(state.phase==='recall'){state.phase='scene';state.step=total()-1;render()}else if(state.step>0){state.step--;render()}};$('path').onchange=()=>{};$('length').onchange=()=>{};$('adventure').onchange=()=>{};$('humor').onchange=savePrefs;$('speed').onchange=savePrefs;$('auto').onchange=()=>{savePrefs();if(!$('auto').checked&&voiceSupported)speechSynthesis.cancel()};let hasStarted=false;function openSetup(){if(voiceSupported)speechSynthesis.cancel();$('setup-overlay').classList.remove('hidden');$('cancel-setup').classList.toggle('hidden',!hasStarted)}$('cancel-setup').onclick=()=>{$('setup-overlay').classList.add('hidden')};$('start-setup').onclick=()=>{state.path=$('path').value;state.length=$('length').value;state.adventure=$('adventure').checked;hasStarted=true;state.isReview=false;$('setup-overlay').classList.add('hidden');$('home').classList.add('hidden');$('learning').classList.remove('hidden');prepare()};showHome();
+</script><script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(e=>console.warn('Mode hors ligne indisponible',e)));}</script><div id="install-panel" class="install-panel" hidden><section class="install-dialog" role="dialog" aria-modal="true" aria-labelledby="install-title"><h2 id="install-title">Installer My English Companion</h2><p id="install-instructions"></p><p id="install-status" class="install-status" aria-live="polite"></p><button type="button" id="install-close" class="install-close">Compris</button></section></div><script>
+(function(){
+'use strict';
+let deferredInstallPrompt=null;
+const button=document.getElementById('install-app');
+const panel=document.getElementById('install-panel');
+const instructions=document.getElementById('install-instructions');
+const status=document.getElementById('install-status');
+const close=document.getElementById('install-close');
+const isStandalone=()=>window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;
+const isIOS=()=>/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const isSafari=()=>/Safari/.test(navigator.userAgent)&&!/CriOS|FxiOS|EdgiOS|Chrome|Chromium/.test(navigator.userAgent);
+function refresh(){button.hidden=isStandalone();}
+function show(message){instructions.textContent=message;status.textContent='';panel.hidden=false;close.focus();}
+function hide(){panel.hidden=true;button.focus();}
+window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;refresh();});
+window.addEventListener('appinstalled',()=>{deferredInstallPrompt=null;panel.hidden=true;refresh();});
+button.addEventListener('click',async()=>{
+ if(isStandalone()){refresh();return;}
+ if(deferredInstallPrompt){
+  const prompt=deferredInstallPrompt;deferredInstallPrompt=null;
+  try{await prompt.prompt();const choice=await prompt.userChoice;if(choice.outcome==='accepted'){show('Installation demandée. Retrouve ensuite My English Companion sur ton écran d’accueil.');}else{show('Installation annulée. Tu peux réessayer depuis le menu du navigateur.');}}catch(e){show('Ouvre le menu de ton navigateur et cherche « Installer l’application » ou « Ajouter à l’écran d’accueil ».');}
+  return;
+ }
+ if(location.protocol==='file:'){show('Pour installer la PWA, publie les fichiers sur GitHub Pages (HTTPS), puis ouvre l’adresse du site dans ton navigateur.');return;}
+ if(isIOS()){
+  show(isSafari()?'Dans Safari, touche le bouton Partager, puis « Sur l’écran d’accueil » (ou « Ajouter à l’écran d’accueil »), puis « Ajouter ».':'Sur iPhone ou iPad, ouvre ce site dans Safari, touche Partager, puis « Sur l’écran d’accueil » et « Ajouter ».');
+ }else{
+  show('Ouvre le menu de ton navigateur (⋮ ou menu principal), puis choisis « Installer l’application » ou « Ajouter à l’écran d’accueil ». Si cette option n’apparaît pas, attends le chargement complet du site et réessaie.');
+ }
+});
+close.addEventListener('click',hide);
+panel.addEventListener('click',event=>{if(event.target===panel)hide();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidden)hide();});
+window.matchMedia('(display-mode: standalone)').addEventListener?.('change',refresh);
+refresh();
+})();
+</script></body></html>
