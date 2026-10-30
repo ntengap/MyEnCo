@@ -122,9 +122,119 @@ body.focus-on #learning .bar{height:10px}
  body.focus-on #learning .nav{position:sticky;bottom:0;z-index:5;background:#fff8ef;padding:12px 0 16px}
 }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"My English Companion","url":"https://ntengap.github.io/MyEnCo/","description":"Application gratuite pour pratiquer l’anglais du quotidien à travers des aventures interactives, des phrases audio et un mode Focus.","applicationCategory":"EducationalApplication","operatingSystem":"Web, Android, iOS","inLanguage":["fr","en"],"isAccessibleForFree":true,"image":"https://ntengap.github.io/MyEnCo/og-image.png","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script><style id="seo-footer-style">.seo-footer{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;padding:18px 16px 26px;font-size:.85rem}.seo-footer a{color:#173a91;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}@media(max-width:420px){.seo-footer{gap:10px 18px}}</style><style id="daily-calendar-style">.daily-home{margin:20px auto 24px;max-width:760px;background:#fff8ef;border:2px solid #14233b;border-radius:20px;padding:20px;color:#14233b}.daily-home label{display:block;font-weight:800;margin-bottom:8px}.daily-home input,.settings input[type=date]{display:block;width:100%;max-width:320px;min-height:52px;border:2px solid #14233b;border-radius:12px;background:white;color:#14233b;font:inherit;padding:10px}.daily-home p{margin:12px 0;color:#34445c}.daily-adventures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.daily-adventure{border:2px solid #14233b;border-radius:14px;background:white;color:#14233b;text-align:left;padding:16px;min-height:96px;cursor:pointer;font:inherit}.daily-adventure strong{display:block;color:#173a91}.daily-adventure small{display:block;margin-top:8px;line-height:1.45}.daily-adventure:hover,.daily-adventure:focus-visible{outline:3px solid #ff655a;outline-offset:2px}.setup-actions button:disabled{opacity:.5;cursor:not-allowed}@media(max-width:540px){.daily-home{margin:12px 0;padding:14px}.daily-adventures{grid-template-columns:1fr}.daily-adventure{min-height:84px}.setup-panel .settings{grid-template-columns:1fr}}</style><style id="direct-adventure-style">#continue{display:none!important}#calendar-panel>label,#calendar-panel>#daily-date{display:none}#calendar-panel.calendar-open>label,#calendar-panel.calendar-open>#daily-date{display:block}#calendar-panel .daily-adventure{min-height:120px}#calendar-panel .daily-adventure:after{content:"Commencer le parcours complet →";display:block;color:#176a50;font-weight:800;margin-top:12px;font-size:.88rem}#discover{order:-1}@media(max-width:540px){#calendar-panel .daily-adventure{min-height:112px}}</style></head><body><div class="app"><header><div><h1>My English Companion</h1><small>Des aventures en anglais, à ton rythme.</small></div><button type="button" id="install-app" class="install-button" aria-haspopup="dialog">⬇ Installer l’application</button><button type="button" id="focus-toggle" class="focus-toggle" aria-pressed="false" aria-label="Activer le mode Focus">◎ Mode Focus</button></header><section class="home" id="home"><div class="home-hero"><span class="eyebrow">UNE PETITE VICTOIRE À LA FOIS</span><h2>Your next little victory starts here.</h2><p>Des aventures du quotidien, de vraies phrases en anglais et le plaisir de progresser.</p></div><div class="daily-home" id="calendar-panel"><label for="daily-date">📅 Choisis une date</label><input type="date" id="daily-date" min="2026-10-25" max="2026-10-30" aria-label="Date des aventures"><p id="daily-count" aria-live="polite"></p><div id="daily-adventures" class="daily-adventures"></div></div><div class="home-options"><button class="home-choice hidden" id="continue">↗ <strong>Continuer mon aventure</strong><small>Reprendre là où tu t'es arrêté.</small></button><button class="home-choice" id="discover">📅 <strong>Nouveaux parcours</strong><small>Choisir une date passée et retrouver ses deux aventures.</small></button><button class="home-choice" id="review">↺ <strong>Revoir ce que j'ai appris</strong><small>Une mini-mission accessible dès le début, puis adaptée à tes acquis.</small></button></div><p class="home-status" id="home-status"></p></section><div class="setup-overlay" id="setup-overlay"><div class="setup-panel" role="dialog" aria-modal="true" aria-labelledby="setup-title"><h2 id="setup-title">Nouveau parcours</h2><p>Choisis ton aventure et ton rythme avant de commencer.</p><section class="settings"><label>Date des aventures<input type="date" id="setup-date" min="2026-10-25" max="2026-10-30" aria-label="Date des aventures"></label><label>Aventure du jour<select id="path"><option value="room">Mon petit monde · retrouver les clés</option><option value="kitchen">Un invité surprise · offrir à boire</option><option value="departure">Je suis en retard ! · partir à temps</option><option value="meeting">On se retrouve où ? · heure, lieu et météo</option><option value="neighbour_noise">La musique du voisin m’empêche de dormir ! · dialogue et compromis</option><option value="laundrette">La machine s’arrête à la laverie ! · lessive et dépannage</option><option value="workshop">Ma première activité en groupe ! · poterie et rencontres</option><option value="parcel">Mon colis a disparu ! · livraison et aide</option><option value="cafe">Oups, ce n’est pas ma commande ! · café et paiement</option><option value="grocery_price">Aventure 10 · Le prix ne correspond pas !</option><option value="bus_diversion">Aventure 11 · Mon arrêt de bus est fermé !</option></select></label><label>Durée<select id="length"><option value="short">Petit · 3 scènes</option><option value="medium">Moyen · 6 scènes</option><option value="long" selected>Long · tout le parcours</option></select></label><label class="switch"><input id="adventure" type="checkbox"> Mode aventure</label><label>Humour<select id="humor"><option value="playful">Taquin</option><option value="gentle">Doux</option><option value="spicy">Très taquin</option></select></label><label>Vitesse<select id="speed"><option value="0.8">Lente</option><option value="1" selected>Normale</option><option value="1.15">Rapide</option></select></label><label class="switch"><input id="auto" type="checkbox" checked> Voix anglaise auto</label></section><div class="setup-actions"><button class="btn hidden" id="cancel-setup">Annuler</button><button class="btn primary" id="start-setup">Commencer →</button></div></div></div><main class="main hidden" id="learning"><div class="progress"><span id="scene-name"></span><strong id="counter"></strong></div><div class="bar"><span id="progress"></span></div><article class="card"><div class="card-head"><span id="phase">🇬🇧 ENGLISH FIRST</span><span id="topic"></span></div><div class="content" id="content"></div></article><div class="nav"><button class="btn" id="prev">← Précédent</button><button class="btn primary" id="next">Suivant →</button></div></main></div><script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"My English Companion","url":"https://ntengap.github.io/MyEnCo/","description":"Application gratuite pour pratiquer l’anglais du quotidien à travers des aventures interactives, des phrases audio et un mode Focus.","applicationCategory":"EducationalApplication","operatingSystem":"Web, Android, iOS","inLanguage":["fr","en"],"isAccessibleForFree":true,"image":"https://ntengap.github.io/MyEnCo/og-image.png","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"}}</script><style id="seo-footer-style">.seo-footer{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;padding:18px 16px 26px;font-size:.85rem}.seo-footer a{color:#173a91;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}@media(max-width:420px){.seo-footer{gap:10px 18px}}</style><style id="daily-calendar-style">.daily-home{margin:20px auto 24px;max-width:760px;background:#fff8ef;border:2px solid #14233b;border-radius:20px;padding:20px;color:#14233b}.daily-home label{display:block;font-weight:800;margin-bottom:8px}.daily-home input,.settings input[type=date]{display:block;width:100%;max-width:320px;min-height:52px;border:2px solid #14233b;border-radius:12px;background:white;color:#14233b;font:inherit;padding:10px}.daily-home p{margin:12px 0;color:#34445c}.daily-adventures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.daily-adventure{border:2px solid #14233b;border-radius:14px;background:white;color:#14233b;text-align:left;padding:16px;min-height:96px;cursor:pointer;font:inherit}.daily-adventure strong{display:block;color:#173a91}.daily-adventure small{display:block;margin-top:8px;line-height:1.45}.daily-adventure:hover,.daily-adventure:focus-visible{outline:3px solid #ff655a;outline-offset:2px}.setup-actions button:disabled{opacity:.5;cursor:not-allowed}@media(max-width:540px){.daily-home{margin:12px 0;padding:14px}.daily-adventures{grid-template-columns:1fr}.daily-adventure{min-height:84px}.setup-panel .settings{grid-template-columns:1fr}}</style><style id="direct-adventure-style">#continue{display:none!important}#calendar-panel>label,#calendar-panel>#daily-date{display:none}#calendar-panel.calendar-open>label,#calendar-panel.calendar-open>#daily-date{display:block}#calendar-panel .daily-adventure{min-height:120px}#calendar-panel .daily-adventure:after{content:"Commencer le parcours complet →";display:block;color:#176a50;font-weight:800;margin-top:12px;font-size:.88rem}#discover{order:-1}@media(max-width:540px){#calendar-panel .daily-adventure{min-height:112px}}</style></head><body><div class="app"><header><div><h1>My English Companion</h1><small>Des aventures en anglais, à ton rythme.</small></div><button type="button" id="install-app" class="install-button" aria-haspopup="dialog">⬇ Installer l’application</button><button type="button" id="focus-toggle" class="focus-toggle" aria-pressed="false" aria-label="Activer le mode Focus">◎ Mode Focus</button></header><section class="home" id="home"><div class="home-hero"><span class="eyebrow">UNE PETITE VICTOIRE À LA FOIS</span><h2>Your next little victory starts here.</h2><p>Des aventures du quotidien, de vraies phrases en anglais et le plaisir de progresser.</p></div><div class="daily-home" id="calendar-panel"><label for="daily-date">📅 Choisis une date</label><input type="date" id="daily-date" aria-label="Date des aventures"><p id="daily-count" aria-live="polite"></p><div id="daily-adventures" class="daily-adventures"></div></div><div class="home-options"><button class="home-choice hidden" id="continue">↗ <strong>Continuer mon aventure</strong><small>Reprendre là où tu t'es arrêté.</small></button><button class="home-choice" id="discover">📅 <strong>Nouveaux parcours</strong><small>Choisir une date passée et retrouver ses deux aventures.</small></button><button class="home-choice" id="review">↺ <strong>Revoir ce que j'ai appris</strong><small>Une mini-mission accessible dès le début, puis adaptée à tes acquis.</small></button></div><p class="home-status" id="home-status"></p></section><div class="setup-overlay" id="setup-overlay"><div class="setup-panel" role="dialog" aria-modal="true" aria-labelledby="setup-title"><h2 id="setup-title">Nouveau parcours</h2><p>Choisis ton aventure et ton rythme avant de commencer.</p><section class="settings"><label>Date des aventures<input type="date" id="setup-date" aria-label="Date des aventures"></label><label>Aventure du jour<select id="path"><option value="room">Mon petit monde · retrouver les clés</option><option value="kitchen">Un invité surprise · offrir à boire</option><option value="departure">Je suis en retard ! · partir à temps</option><option value="meeting">On se retrouve où ? · heure, lieu et météo</option><option value="neighbour_noise">La musique du voisin m’empêche de dormir ! · dialogue et compromis</option><option value="laundrette">La machine s’arrête à la laverie ! · lessive et dépannage</option><option value="workshop">Ma première activité en groupe ! · poterie et rencontres</option><option value="parcel">Mon colis a disparu ! · livraison et aide</option><option value="cafe">Oups, ce n’est pas ma commande ! · café et paiement</option><option value="grocery_price">Aventure 10 · Le prix ne correspond pas !</option><option value="bus_diversion">Aventure 11 · Mon arrêt de bus est fermé !</option></select></label><label>Durée<select id="length"><option value="short">Petit · 3 scènes</option><option value="medium">Moyen · 6 scènes</option><option value="long" selected>Long · tout le parcours</option></select></label><label class="switch"><input id="adventure" type="checkbox"> Mode aventure</label><label>Humour<select id="humor"><option value="playful">Taquin</option><option value="gentle">Doux</option><option value="spicy">Très taquin</option></select></label><label>Vitesse<select id="speed"><option value="0.8">Lente</option><option value="1" selected>Normale</option><option value="1.15">Rapide</option></select></label><label class="switch"><input id="auto" type="checkbox" checked> Voix anglaise auto</label></section><div class="setup-actions"><button class="btn hidden" id="cancel-setup">Annuler</button><button class="btn primary" id="start-setup">Commencer →</button></div></div></div><main class="main hidden" id="learning"><div class="progress"><span id="scene-name"></span><strong id="counter"></strong></div><div class="bar"><span id="progress"></span></div><article class="card"><div class="card-head"><span id="phase">🇬🇧 ENGLISH FIRST</span><span id="topic"></span></div><div class="content" id="content"></div></article><div class="nav"><button class="btn" id="prev">← Précédent</button><button class="btn primary" id="next">Suivant →</button></div></main></div><script>
 // MODIFIE ICI LES SCÈNES : chaque question doit garder un lien naturel avec la précédente.
 const scenes={
+ ticket_machine:[
+  {
+    "topic": "Le distributeur ne rend pas la monnaie",
+    "en": "You buy a train ticket from a machine. It takes your money, but no ticket comes out. What do you say?",
+    "fr": "Le distributeur a encaissé ton paiement sans délivrer de billet.",
+    "instruction": "Explique le problème clairement.",
+    "choices": [
+      "The machine took my money, but I didn't get a ticket.",
+      "I paid, but no ticket came out.",
+      "Excuse me, the ticket machine isn't working properly."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Vérifier le paiement",
+    "en": "A member of staff asks, 'Did you pay by card or cash?' How do you answer?",
+    "fr": "L'agent veut savoir comment tu as payé.",
+    "instruction": "Précise le moyen de paiement.",
+    "choices": [
+      "I paid by card.",
+      "I used my bank card.",
+      "I paid with my debit card."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Retrouver la preuve",
+    "en": "The staff member asks, 'Do you have proof of payment?' What do you say?",
+    "fr": "Tu peux montrer la transaction sur ton téléphone.",
+    "instruction": "Propose de montrer une preuve.",
+    "choices": [
+      "Yes, I can show you the payment on my phone.",
+      "I have the transaction here.",
+      "Yes, the payment is showing in my banking app."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Expliquer ton trajet",
+    "en": "'Where are you travelling to?' asks the staff member. What do you say?",
+    "fr": "L'agent doit connaître ta destination.",
+    "instruction": "Indique simplement où tu vas.",
+    "choices": [
+      "I'm travelling to Brighton.",
+      "I need a ticket to Brighton.",
+      "I'm going to Brighton today."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Faire un choix",
+    "en": "'I can issue a ticket now or request a refund.' You still need to travel. What do you choose?",
+    "fr": "On te propose deux solutions, mais tu dois prendre le train.",
+    "instruction": "Choisis l'option qui te permet de partir.",
+    "choices": [
+      "Could you issue the ticket, please?",
+      "I'd prefer a ticket, please.",
+      "I still need to travel, so a ticket would be great."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Vérifier les informations",
+    "en": "The staff member prints a ticket. 'Is this the correct destination?' What do you say?",
+    "fr": "Le billet indique Brighton, ta destination.",
+    "instruction": "Confirme après vérification.",
+    "choices": [
+      "Yes, Brighton is correct.",
+      "That's right, thank you.",
+      "Yes, that's the destination I need."
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Demander le quai",
+    "en": "You have your ticket, but the departure board has changed. What do you ask?",
+    "fr": "Le tableau d'affichage a changé et tu ne connais pas le quai.",
+    "instruction": "Demande une information précise.",
+    "choices": [
+      "Which platform does the train leave from?",
+      "Could you tell me the platform, please?",
+      "Do you know which platform I need?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Confirmer l'horaire",
+    "en": "'Platform four, at ten twenty.' What do you say to check?",
+    "fr": "Tu veux être sûr d'avoir compris le quai et l'heure.",
+    "instruction": "Répète les informations importantes.",
+    "choices": [
+      "Platform four at ten twenty, is that right?",
+      "So it's platform four, ten twenty?",
+      "Just to check: platform four at ten twenty?"
+    ],
+    "joke": ""
+  },
+  {
+    "topic": "Conclure",
+    "en": "The staff member confirms the details. How do you end the conversation?",
+    "fr": "Tu as ton billet et les informations pour partir.",
+    "instruction": "Remercie naturellement.",
+    "choices": [
+      "Thank you for sorting that out.",
+      "Thanks for your help. I can catch my train now.",
+      "I really appreciate your help. Have a good day!"
+    ],
+    "joke": ""
+  }
+],
 "grocery_price": [
   {
     "topic": "Le prix ne correspond pas",
@@ -822,6 +932,34 @@ const scenes={
  ]
 };
 const answerTranslations={
+"The machine took my money, but I didn't get a ticket.":"La machine a pris mon argent, mais je n'ai pas reçu de billet.",
+"I paid, but no ticket came out.":"J'ai payé, mais aucun billet n'est sorti.",
+"Excuse me, the ticket machine isn't working properly.":"Excusez-moi, le distributeur de billets ne fonctionne pas correctement.",
+"I paid by card.":"J'ai payé par carte.",
+"I used my bank card.":"J'ai utilisé ma carte bancaire.",
+"I paid with my debit card.":"J'ai payé avec ma carte de débit.",
+"Yes, I can show you the payment on my phone.":"Oui, je peux vous montrer le paiement sur mon téléphone.",
+"I have the transaction here.":"J'ai la transaction ici.",
+"Yes, the payment is showing in my banking app.":"Oui, le paiement apparaît dans mon application bancaire.",
+"I'm travelling to Brighton.":"Je vais à Brighton.",
+"I need a ticket to Brighton.":"J'ai besoin d'un billet pour Brighton.",
+"I'm going to Brighton today.":"Je vais à Brighton aujourd'hui.",
+"Could you issue the ticket, please?":"Pourriez-vous délivrer le billet, s'il vous plaît ?",
+"I'd prefer a ticket, please.":"Je préférerais un billet, s'il vous plaît.",
+"I still need to travel, so a ticket would be great.":"Je dois toujours voyager, donc un billet serait parfait.",
+"Yes, Brighton is correct.":"Oui, Brighton est bien la destination.",
+"That's right, thank you.":"C'est exact, merci.",
+"Yes, that's the destination I need.":"Oui, c'est la destination qu'il me faut.",
+"Which platform does the train leave from?":"De quel quai part le train ?",
+"Could you tell me the platform, please?":"Pourriez-vous m'indiquer le quai, s'il vous plaît ?",
+"Do you know which platform I need?":"Savez-vous de quel quai je dois partir ?",
+"Platform four at ten twenty, is that right?":"Quai quatre à dix heures vingt, c'est bien ça ?",
+"So it's platform four, ten twenty?":"Donc c'est quai quatre, dix heures vingt ?",
+"Just to check: platform four at ten twenty?":"Juste pour vérifier : quai quatre à dix heures vingt ?",
+"Thank you for sorting that out.":"Merci d'avoir réglé le problème.",
+"Thanks for your help. I can catch my train now.":"Merci pour votre aide. Je peux maintenant prendre mon train.",
+"I really appreciate your help. Have a good day!":"Je vous remercie beaucoup pour votre aide. Bonne journée !",
+
 "I think there is a mistake with the price.": "Je pense qu’il y a une erreur de prix.",
   "The shelf said four pounds, not six.": "L’étiquette indiquait quatre livres, pas six.",
   "Excuse me, could we check the price?": "Excusez-moi, pourrions-nous vérifier le prix ?",
@@ -1104,6 +1242,7 @@ function discardRecording(){stopRecording();releaseMic();if(recordingUrl)URL.rev
 // Les interventions ne sont pas un tirage décoratif : elles correspondent à des enjeux narratifs précis.
 // Une aventure ne déclenche une intervention que si la scène et la durée lui donnent un sens.
 const ADVENTURE_BEATS={
+ ticket_machine:{0:{title:'IMAGINE LA SCÈNE',hint:'Le paiement est passé, mais tu n’as pas de billet. La première étape consiste à décrire le fait, sans supposer pourquoi.'},4:{title:'ET TOI, TU FERAIS QUOI ?',hint:'Un remboursement prendrait du temps, mais tu dois voyager aujourd’hui. Choisis la solution adaptée à ton objectif.'},7:{title:'VOILÀ POURQUOI ÇA TE CONCERNE',hint:'Répéter un quai et une heure permet de vérifier une information importante avant de se déplacer.'}},
 "grocery_price": {
   "0": {
     "title": "IMAGINE LA SCÈNE",
@@ -1183,7 +1322,7 @@ function add(parent,...nodes){nodes.forEach(n=>parent.append(n));return parent}
 function draw(key,scene){let d=state.draws[key];if(!d){d={remaining:shuffle(scene.choices.map((_,i)=>i)),index:null,seen:0,cycle:1};state.draws[key]=d;advanceDraw(d,scene)}return d}
 function advanceDraw(d,scene){if(!d.remaining.length){d.remaining=shuffle(scene.choices.map((_,i)=>i));if(d.remaining.length>1&&d.remaining[0]===d.index){[d.remaining[0],d.remaining[1]]=[d.remaining[1],d.remaining[0]]}d.cycle++;d.seen=0}d.index=d.remaining.shift();d.seen++}
 function speakScene(){speak(scenes[state.path][state.step].en)}
-function render(){if(hasStarted&&!state.isReview&&state.phase!=='summary')saveProgress();if(voiceSupported)speechSynthesis.cancel();savePrefs();const n=total(),isScene=state.phase==='scene';$('scene-name').textContent=({room:'Mon petit monde',kitchen:'Un invité surprise',departure:'Je suis en retard !',meeting:'On se retrouve où ?',cafe:'Oups, ce n’est pas ma commande !',parcel:'Mon colis a disparu !',workshop:'Ma première activité en groupe !',neighbour_noise:'La musique du voisin m’empêche de dormir !',laundrette:'La machine s’arrête à la laverie !',grocery_price:'Le prix ne correspond pas !',bus_diversion:'Mon arrêt de bus est fermé !',review:'Révision'}[state.path]);$('counter').textContent=isScene?`Scène ${state.step+1} / ${n}`:'Bilan final';$('progress').style.width=(isScene?(state.step+1)/n*100:100)+'%';$('prev').disabled=isScene&&state.step===0;$('next').textContent=isScene?(state.step===n-1?'Terminer le parcours →':'Suivant →'):(state.phase==='recall'?'Voir mon bilan →':'Retour aux aventures ↺');$('phase').textContent=isScene?'🇬🇧 ENGLISH FIRST':'BILAN';$('topic').textContent=isScene?scenes[state.path][state.step].topic:'Mémoire';const content=$('content');content.replaceChildren();if(!isScene){renderFinal(content);return}const s=scenes[state.path][state.step],key=state.path+':'+state.step;
+function render(){if(hasStarted&&!state.isReview&&state.phase!=='summary')saveProgress();if(voiceSupported)speechSynthesis.cancel();savePrefs();const n=total(),isScene=state.phase==='scene';$('scene-name').textContent=({room:'Mon petit monde',kitchen:'Un invité surprise',departure:'Je suis en retard !',meeting:'On se retrouve où ?',cafe:'Oups, ce n’est pas ma commande !',parcel:'Mon colis a disparu !',workshop:'Ma première activité en groupe !',neighbour_noise:'La musique du voisin m’empêche de dormir !',laundrette:'La machine s’arrête à la laverie !',grocery_price:'Le prix ne correspond pas !',bus_diversion:'Mon arrêt de bus est fermé !',ticket_machine:'Le distributeur ne donne pas mon billet !',review:'Révision'}[state.path]);$('counter').textContent=isScene?`Scène ${state.step+1} / ${n}`:'Bilan final';$('progress').style.width=(isScene?(state.step+1)/n*100:100)+'%';$('prev').disabled=isScene&&state.step===0;$('next').textContent=isScene?(state.step===n-1?'Terminer le parcours →':'Suivant →'):(state.phase==='recall'?'Voir mon bilan →':'Retour aux aventures ↺');$('phase').textContent=isScene?'🇬🇧 ENGLISH FIRST':'BILAN';$('topic').textContent=isScene?scenes[state.path][state.step].topic:'Mémoire';const content=$('content');content.replaceChildren();if(!isScene){renderFinal(content);return}const s=scenes[state.path][state.step],key=state.path+':'+state.step;
 add(content,el('h2','english',s.en),btn('🔊 Listen',()=>speak(s.en),'btn primary'),el('p','instruction',s.instruction));
 const sceneTranslation=el('p','translation',s.fr);
 if(document.body.classList.contains('focus-on'))sceneTranslation.classList.add('focus-hidden');
@@ -1224,7 +1363,7 @@ function addWonder(content){
  panel.append(controls);content.append(panel);
 }
 function renderFinal(content){if(state.phase==='recall'){
-add(content,el('h2','english','What do you remember?'),el('p','instruction','DIS-MOI CE QUE TU AS RETENU'),el('p','translation',({room:'Sans regarder les scènes, raconte comment tu as retrouvé les clés. Quelles phrases pourrais-tu réutiliser demain ?',kitchen:'Sans regarder les scènes, raconte comment tu accueillerais un invité qui a soif. Quelles phrases utiliserais-tu ?',departure:'Sans regarder les scènes, raconte comment tu t’es préparé à sortir malgré les imprévus.',meeting:'Sans regarder les scènes, explique où tu étais, à quelle heure vous aviez rendez-vous et comment la pluie a changé vos plans.',cafe:'Sans regarder les scènes, raconte comment tu as commandé, corrigé une erreur et vérifié ton addition.',parcel:'Sans regarder les scènes, explique pourquoi ton colis manquait, où tu as cherché et quelle solution tu as obtenue.',workshop:'Sans regarder les scènes, raconte comment tu as rencontré quelqu’un, demandé une explication et encouragé ton voisin.',neighbour_noise:state.length==='short'?"Sans regarder les scènes, explique en anglais ce qui te gêne et comment tu as demandé poliment de baisser la musique.":state.length==='medium'?"Sans regarder les scènes, raconte comment tu as demandé de baisser la musique, expliqué pourquoi et trouvé un compromis.":"Sans regarder les scènes, raconte la conversation complète : le bruit, ta demande, le compromis et ce que vous avez décidé pour la prochaine fois.",laundrette:state.length==='short'?"Sans regarder les scènes, explique en anglais comment tu as trouvé une machine libre et choisi un programme.":state.length==='medium'?"Sans regarder les scènes, raconte comment tu as choisi un programme, signalé une erreur et demandé de l’aide.":"Sans regarder les scènes, raconte comment tu as choisi un programme, signalé la panne, trouvé une autre machine et terminé ton lavage.",grocery_price:state.length==='short'?"Sans regarder, explique en anglais la différence de prix, désigne le produit et remercie après la correction.":state.length==='medium'?"Raconte comment tu as corrigé le prix, vérifié le total et payé par carte.":"Raconte toute la situation : prix incorrect, vérification, paiement, reçu et conclusion.",bus_diversion:state.length==='short'?"Sans regarder, explique pourquoi ton arrêt est fermé et comment tu as trouvé l’arrêt provisoire.":state.length==='medium'?"Raconte comment tu as trouvé l’arrêt provisoire, vérifié le bus et utilisé ton ticket.":"Raconte tout le trajet : arrêt fermé, bus de remplacement, ticket, arrêt modifié et descente à Market Square."}[state.path])));
+add(content,el('h2','english','What do you remember?'),el('p','instruction','DIS-MOI CE QUE TU AS RETENU'),el('p','translation',({room:'Sans regarder les scènes, raconte comment tu as retrouvé les clés. Quelles phrases pourrais-tu réutiliser demain ?',kitchen:'Sans regarder les scènes, raconte comment tu accueillerais un invité qui a soif. Quelles phrases utiliserais-tu ?',departure:'Sans regarder les scènes, raconte comment tu t’es préparé à sortir malgré les imprévus.',meeting:'Sans regarder les scènes, explique où tu étais, à quelle heure vous aviez rendez-vous et comment la pluie a changé vos plans.',cafe:'Sans regarder les scènes, raconte comment tu as commandé, corrigé une erreur et vérifié ton addition.',parcel:'Sans regarder les scènes, explique pourquoi ton colis manquait, où tu as cherché et quelle solution tu as obtenue.',workshop:'Sans regarder les scènes, raconte comment tu as rencontré quelqu’un, demandé une explication et encouragé ton voisin.',neighbour_noise:state.length==='short'?"Sans regarder les scènes, explique en anglais ce qui te gêne et comment tu as demandé poliment de baisser la musique.":state.length==='medium'?"Sans regarder les scènes, raconte comment tu as demandé de baisser la musique, expliqué pourquoi et trouvé un compromis.":"Sans regarder les scènes, raconte la conversation complète : le bruit, ta demande, le compromis et ce que vous avez décidé pour la prochaine fois.",laundrette:state.length==='short'?"Sans regarder les scènes, explique en anglais comment tu as trouvé une machine libre et choisi un programme.":state.length==='medium'?"Sans regarder les scènes, raconte comment tu as choisi un programme, signalé une erreur et demandé de l’aide.":"Sans regarder les scènes, raconte comment tu as choisi un programme, signalé la panne, trouvé une autre machine et terminé ton lavage.",grocery_price:state.length==='short'?"Sans regarder, explique en anglais la différence de prix, désigne le produit et remercie après la correction.":state.length==='medium'?"Raconte comment tu as corrigé le prix, vérifié le total et payé par carte.":"Raconte toute la situation : prix incorrect, vérification, paiement, reçu et conclusion.",bus_diversion:state.length==='short'?"Sans regarder, explique pourquoi ton arrêt est fermé et comment tu as trouvé l’arrêt provisoire.":state.length==='medium'?"Raconte comment tu as trouvé l’arrêt provisoire, vérifié le bus et utilisé ton ticket.":"Raconte tout le trajet : arrêt fermé, bus de remplacement, ticket, arrêt modifié et descente à Market Square.",ticket_machine:state.length==='short'?"Sans regarder, explique en anglais pourquoi le distributeur n’a pas donné ton billet et comment tu prouves ton paiement.":state.length==='medium'?"Raconte le problème, la preuve de paiement, ta destination et le choix d’un nouveau billet.":"Raconte comment tu as récupéré ton billet, vérifié ta destination, puis confirmé le quai et l’heure du train."}[state.path])));
 const row=el('div','buttons'),status=el('p','subtle',''),area=el('textarea');area.id='recallText';area.placeholder='I remember… / Je me souviens…';area.value=state.recall;area.oninput=()=>{state.recall=area.value};
 const recordButton=btn('🎙️ S’enregistrer',async()=>{
 if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){showAudioFallback('Le microphone direct est bloqué ici (souvent avec un fichier local). Essaie « Enregistrer avec le téléphone » ou ouvre l’application en HTTPS.');return}
@@ -1282,12 +1421,12 @@ function choose(mode){
 add(content,picker,audioPanel,writePanel);
 choose(state.recallMode==='audio'?'audio':state.recallMode==='write'?'write':'none');
 return}
-add(content,el('h2','english','What you learned'),el('p','instruction','VOILÀ CE QUE JE VEUX QUE TU RETIENNES'),el('p','translation',({room:'Tu sais exprimer une perte, chercher un objet et dire que tu l’as retrouvé.',kitchen:'Tu sais proposer une boisson, comprendre une demande et réagir à un imprévu.',departure:'Tu sais expliquer un retard, retrouver un objet et adapter ton plan.',meeting:'Tu sais demander et dire l’heure, indiquer où tu es, décrire la météo et adapter un rendez-vous.',cafe:'Tu sais commander, demander un prix, corriger une erreur poliment et vérifier une addition.',parcel:'Tu sais signaler un colis manquant, décrire un lieu et demander une solution au service client.',workshop:'Tu sais faire connaissance, demander de répéter une consigne et échanger des compliments ou des encouragements.',neighbour_noise:state.length==='short'?"Tu sais décrire un bruit gênant, aborder quelqu’un poliment et demander de baisser le volume.":state.length==='medium'?"Tu sais aussi expliquer l’effet du bruit sur toi, demander un horaire précis et accepter un compromis.":"Tu sais mener une conversation délicate sans accuser, vérifier le résultat, prévenir les futurs problèmes et préserver de bonnes relations.",laundrette:state.length==='short'?"Tu sais vérifier si une machine est disponible, demander conseil et choisir un programme adapté.":state.length==='medium'?"Tu sais aussi décrire un arrêt inattendu, expliquer ce que tu as essayé et demander de l’aide.":"Tu sais choisir un programme, expliquer une panne, demander de l’aide, accepter une alternative et confirmer la résolution.",grocery_price:state.length==='short'?"Tu sais signaler une différence de prix, identifier un produit et remercier après une correction.":state.length==='medium'?"Tu sais aussi vérifier un total, confirmer un montant et choisir un paiement.":"Tu sais mener tout l’échange à la caisse, demander un reçu et vérifier que la correction figure dessus.",bus_diversion:state.length==='short'?"Tu sais signaler un arrêt fermé, demander une direction et la confirmer.":state.length==='medium'?"Tu sais aussi vérifier la destination d’un bus, la validité d’un ticket et monter à bord.":"Tu sais gérer une déviation pendant le trajet, demander où descendre et vérifier la marche à pied."}[state.path])));const ul=el('ul','summary');for(let i=0;i<total();i++){const s=scenes[state.path][i],a=state.answers[state.path+':'+i];if(a){const li=el('li','');add(li,el('strong','',a),el('span','subtle',' — '+(answerTranslations[a]||s.fr)));ul.append(li)}else{const li=el('li','',s.en);ul.append(li)}}content.append(ul);const rec=el('div','recap');add(rec,el('strong','','Ce que tu as retenu :'),el('p','',state.recallMode==='audio'?(state.recordingBlob?'Réponse enregistrée à l’oral (audio non intégré au PDF).':'Aucun enregistrement terminé.'):(state.recall.trim()||'Aucune réponse fournie.')));content.append(rec);addWonder(content);if(state.recordingBlob)content.append(el('p','subtle','✓ Une réponse audio a aussi été enregistrée pendant cette session (non incluse dans le PDF).'));const link=el('a','download','⬇ Télécharger tout le dialogue (PDF)');link.href=makePdfUrl();link.download='my-english-companion-dialogue.pdf';content.append(link);content.append(el('p','subtle','Le PDF conserve la hiérarchie visuelle anglais / instructions / traductions, sans les commentaires du compagnon.'))}
+add(content,el('h2','english','What you learned'),el('p','instruction','VOILÀ CE QUE JE VEUX QUE TU RETIENNES'),el('p','translation',({room:'Tu sais exprimer une perte, chercher un objet et dire que tu l’as retrouvé.',kitchen:'Tu sais proposer une boisson, comprendre une demande et réagir à un imprévu.',departure:'Tu sais expliquer un retard, retrouver un objet et adapter ton plan.',meeting:'Tu sais demander et dire l’heure, indiquer où tu es, décrire la météo et adapter un rendez-vous.',cafe:'Tu sais commander, demander un prix, corriger une erreur poliment et vérifier une addition.',parcel:'Tu sais signaler un colis manquant, décrire un lieu et demander une solution au service client.',workshop:'Tu sais faire connaissance, demander de répéter une consigne et échanger des compliments ou des encouragements.',neighbour_noise:state.length==='short'?"Tu sais décrire un bruit gênant, aborder quelqu’un poliment et demander de baisser le volume.":state.length==='medium'?"Tu sais aussi expliquer l’effet du bruit sur toi, demander un horaire précis et accepter un compromis.":"Tu sais mener une conversation délicate sans accuser, vérifier le résultat, prévenir les futurs problèmes et préserver de bonnes relations.",laundrette:state.length==='short'?"Tu sais vérifier si une machine est disponible, demander conseil et choisir un programme adapté.":state.length==='medium'?"Tu sais aussi décrire un arrêt inattendu, expliquer ce que tu as essayé et demander de l’aide.":"Tu sais choisir un programme, expliquer une panne, demander de l’aide, accepter une alternative et confirmer la résolution.",grocery_price:state.length==='short'?"Tu sais signaler une différence de prix, identifier un produit et remercier après une correction.":state.length==='medium'?"Tu sais aussi vérifier un total, confirmer un montant et choisir un paiement.":"Tu sais mener tout l’échange à la caisse, demander un reçu et vérifier que la correction figure dessus.",bus_diversion:state.length==='short'?"Tu sais signaler un arrêt fermé, demander une direction et la confirmer.":state.length==='medium'?"Tu sais aussi vérifier la destination d’un bus, la validité d’un ticket et monter à bord.":"Tu sais gérer une déviation pendant le trajet, demander où descendre et vérifier la marche à pied.",ticket_machine:state.length==='short'?"Tu sais expliquer un paiement sans billet et montrer une preuve de paiement.":state.length==='medium'?"Tu sais aussi préciser ta destination, choisir une solution et vérifier le billet.":"Tu sais résoudre un problème de distributeur, demander un quai et confirmer une heure de départ."}[state.path])));const ul=el('ul','summary');for(let i=0;i<total();i++){const s=scenes[state.path][i],a=state.answers[state.path+':'+i];if(a){const li=el('li','');add(li,el('strong','',a),el('span','subtle',' — '+(answerTranslations[a]||s.fr)));ul.append(li)}else{const li=el('li','',s.en);ul.append(li)}}content.append(ul);const rec=el('div','recap');add(rec,el('strong','','Ce que tu as retenu :'),el('p','',state.recallMode==='audio'?(state.recordingBlob?'Réponse enregistrée à l’oral (audio non intégré au PDF).':'Aucun enregistrement terminé.'):(state.recall.trim()||'Aucune réponse fournie.')));content.append(rec);addWonder(content);if(state.recordingBlob)content.append(el('p','subtle','✓ Une réponse audio a aussi été enregistrée pendant cette session (non incluse dans le PDF).'));const link=el('a','download','⬇ Télécharger tout le dialogue (PDF)');link.href=makePdfUrl();link.download='my-english-companion-dialogue.pdf';content.append(link);content.append(el('p','subtle','Le PDF conserve la hiérarchie visuelle anglais / instructions / traductions, sans les commentaires du compagnon.'))}
 // PDF avec la meme hierarchie que l'ecran : anglais bleu, consigne lisible, traductions discretes.
 // Les plaisanteries, commentaires et interventions du compagnon sont exclus de l'export.
 function makePdfUrl(){
  const blocks=[{text:'MY ENGLISH COMPANION',kind:'heading'},
- {text:`${({room:'Mon petit monde',kitchen:'Un invité surprise',departure:'Je suis en retard !',meeting:'On se retrouve où ?',cafe:'Oups, ce n’est pas ma commande !',parcel:'Mon colis a disparu !',workshop:'Ma première activité en groupe !',neighbour_noise:'La musique du voisin m’empêche de dormir !',laundrette:'La machine s’arrête à la laverie !',grocery_price:'Le prix ne correspond pas !',bus_diversion:'Mon arrêt de bus est fermé !',review:'Révision'}[state.path])} · Parcours ${state.length}`,kind:'meta'}];
+ {text:`${({room:'Mon petit monde',kitchen:'Un invité surprise',departure:'Je suis en retard !',meeting:'On se retrouve où ?',cafe:'Oups, ce n’est pas ma commande !',parcel:'Mon colis a disparu !',workshop:'Ma première activité en groupe !',neighbour_noise:'La musique du voisin m’empêche de dormir !',laundrette:'La machine s’arrête à la laverie !',grocery_price:'Le prix ne correspond pas !',bus_diversion:'Mon arrêt de bus est fermé !',ticket_machine:'Le distributeur ne donne pas mon billet !',review:'Révision'}[state.path])} · Parcours ${state.length}`,kind:'meta'}];
  for(let i=0;i<total();i++){
   const s=scenes[state.path][i],a=state.answers[state.path+':'+i];
   blocks.push({text:`SCÈNE ${i+1} — ${s.topic}`,kind:'section'},
@@ -1418,78 +1557,30 @@ refresh();
 'use strict';
 const DAY='2026-10-30';
 const schedule={
- "2026-10-25": [
-  {
-   "id": "room",
-   "title": "Mon petit monde · Retrouver les clés",
-   "description": "Chercher un objet perdu."
-  },
-  {
-   "id": "kitchen",
-   "title": "Un invité surprise · Offrir à boire",
-   "description": "Accueillir un invité."
-  }
+ '2026-10-25':[
+  {id:'room',title:'Aventure 1 . Mon petit monde',description:'Retrouver ses clés.'},
+  {id:'kitchen',title:'Aventure 2 . Un invité surprise',description:'Accueillir un invité.'},
  ],
- "2026-10-26": [
-  {
-   "id": "departure",
-   "title": "Je suis en retard !",
-   "description": "Partir à temps."
-  },
-  {
-   "id": "meeting",
-   "title": "On se retrouve où ?",
-   "description": "Fixer une heure et un lieu."
-  }
+ '2026-10-26':[
+  {id:'departure',title:'Aventure 3 . Je suis en retard !',description:'Gérer un départ imprévu.'},
+  {id:'meeting',title:'Aventure 4 . On se retrouve où ?',description:'Organiser un rendez-vous.'},
  ],
- "2026-10-27": [
-  {
-   "id": "neighbour_noise",
-   "title": "La musique du voisin !",
-   "description": "Résoudre un problème de bruit."
-  },
-  {
-   "id": "laundrette",
-   "title": "La machine s’arrête à la laverie !",
-   "description": "Demander de l’aide."
-  }
+ '2026-10-27':[
+  {id:'neighbour_noise',title:'Aventure 5 . La musique du voisin',description:'Demander de baisser le son.'},
+  {id:'laundrette',title:'Aventure 6 . La machine s’arrête !',description:'Résoudre une panne à la laverie.'},
  ],
- "2026-10-28": [
-  {
-   "id": "workshop",
-   "title": "Ma première activité en groupe !",
-   "description": "Participer à une activité."
-  },
-  {
-   "id": "parcel",
-   "title": "Mon colis a disparu !",
-   "description": "Signaler une livraison manquante."
-  }
+ '2026-10-28':[
+  {id:'workshop',title:'Aventure 7 . Ma première activité en groupe',description:'Faire connaissance à un atelier.'},
+  {id:'parcel',title:'Aventure 8 . Mon colis a disparu !',description:'Retrouver une livraison.'},
  ],
- "2026-10-29": [
-  {
-   "id": "cafe",
-   "title": "Oups, ce n’est pas ma commande !",
-   "description": "Corriger une commande."
-  },
-  {
-   "id": "room",
-   "title": "Révision · Retrouver les clés",
-   "description": "Rejouer une aventure déjà étudiée."
-  }
+ '2026-10-29':[
+  {id:'cafe',title:'Aventure 9 . Oups, ce n’est pas ma commande !',description:'Corriger une commande.'},
+  {id:'ticket_machine',title:'Aventure 10 · My ticket never came out!',description:'Récupérer un billet après un paiement au distributeur.'},
  ],
- "2026-10-30": [
-  {
-   "id": "grocery_price",
-   "title": "Aventure 10 · The price is wrong!",
-   "description": "Corriger un prix à la caisse."
-  },
-  {
-   "id": "bus_diversion",
-   "title": "Aventure 11 · My bus stop is closed!",
-   "description": "Trouver un nouvel arrêt."
-  }
- ]
+ '2026-10-30':[
+  {id:'grocery_price',title:'Aventure 11 · The price is wrong!',description:'Corriger un prix à la caisse.'},
+  {id:'bus_diversion',title:'Aventure 12 · My bus stop is closed!',description:'Trouver un arrêt provisoire.'},
+ ],
 };
 const homeDate=document.getElementById('daily-date'),setupDate=document.getElementById('setup-date'),select=document.getElementById('path');
 const count=document.getElementById('daily-count'),cards=document.getElementById('daily-adventures'),start=document.getElementById('start-setup');
@@ -1504,7 +1595,7 @@ function showDate(date){
  for(const a of entries){const o=document.createElement('option');o.value=a.id;o.textContent=a.title;select.append(o)}
  if(entries.some(a=>a.id===previous))select.value=previous;
  select.disabled=entries.length===0;start.disabled=entries.length===0;
- count.textContent=entries.length===2?'2 aventures disponibles pour cette date.':'Aucune aventure pour cette date. Choisis une date du 25 au 30 octobre 2026.';
+ count.textContent=entries.length===2?'2 aventures disponibles pour cette date.':'Aucune aventure publiée pour cette date. Choisis une date du 25 au 30 octobre 2026.';
  cards.replaceChildren();
  for(const a of entries){
   const b=document.createElement('button');b.type='button';b.className='daily-adventure';
@@ -1525,7 +1616,7 @@ function launchDailyAdventure(id){
 const savedDate=(()=>{try{return localStorage.getItem('mec-selected-date')||todayLocal()}catch(e){return todayLocal()}})();
 function change(date){showDate(date);try{localStorage.setItem('mec-selected-date',date)}catch(e){}}
 homeDate.addEventListener('change',()=>change(homeDate.value));setupDate.addEventListener('change',()=>change(setupDate.value));
-// Old adventures remain in the source for previously saved progress; the date picker only lists published daily adventures.
+// Les 12 aventures distinctes sont accessibles à raison de deux par date, du 25 au 30 octobre 2026.
 showDate(DAY);
 })();
 </script></body></html>
