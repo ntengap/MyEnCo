@@ -1,0 +1,15 @@
+# My English Companion
+
+> Application web gratuite pour pratiquer l’anglais du quotidien avec des aventures interactives, des phrases audio et un mode Focus.
+
+Site officiel : https://ntengap.github.io/MyEnCo/
+Langues : français (interface et traductions), anglais (phrases pédagogiques).
+
+## Accès
+- [Application et aventures](https://ntengap.github.io/MyEnCo/)
+- [Sitemap](https://ntengap.github.io/MyEnCo/sitemap.xml)
+
+## Fonctionnement
+Choisissez une aventure et un parcours court, moyen ou long. Écoutez les phrases anglaises et pratiquez les réponses suggérées. Le mode Focus masque la traduction jusqu’à sa demande. L’application peut être installée sur mobile comme PWA.
+
+Note : llms.txt est une convention facultative ; il ne garantit pas l’indexation ni l’utilisation par les modèles d’IA.

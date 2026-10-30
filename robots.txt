@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /MyEnCo/
+
+Sitemap: https://ntengap.github.io/MyEnCo/sitemap.xml
